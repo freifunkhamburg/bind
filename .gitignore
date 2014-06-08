@@ -2,5 +2,6 @@
 *
 
 #ausser...
-!./master/
+!/master
+!/master/*
 !.gitignore
