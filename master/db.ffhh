@@ -1,0 +1,76 @@
+$ORIGIN .
+$TTL 1d
+ffhh			IN SOA	gateway-hamburg01.ffhh. freifunk.hamburg.ccc.de. (
+				1356797140 ; serial
+				3600       ; refresh (1 hour)
+				180        ; retry (3 minutes)
+				3600       ; expire (1 hour)
+				60         ; minimum (1 minute)
+				)
+			NS	gateway-hamburg01.ffhh.
+			NS	srv01.ffhh.
+$ORIGIN ffhh.
+
+; next node
+knoten			A	10.112.0.1
+			AAAA	fd51:2bb2:fd0d::1
+node			CNAME	knoten
+router			CNAME	knoten
+
+; gateways
+gateway-hamburg01	A	10.112.14.1
+			AAAA	fd51:2bb2:fd0d::e01
+gw01			CNAME 	gateway-hamburg01
+gateway-hamburg05       A       10.112.18.1
+                        AAAA    fd51:2bb2:fd0d::d01
+gw05			CNAME   gateway-hamburg05
+gateway-hamburg07       A       10.112.16.1
+                        AAAA    fd51:2bb2:fd0d::a01
+gw07			CNAME	gateway-hamburg07
+gateway-hamburg08       A       10.112.22.1
+                        AAAA    fd51:2bb2:fd0d::b01
+gw08			CNAME	gateway-hamburg08
+gateway-hamburg09       A       10.112.24.1
+                        AAAA    fd51:2bb2:fd0d::901
+gw09                    CNAME   gateway-hamburg09
+gateway-hamburg11       A       10.112.28.1
+                        AAAA    fd51:2bb2:fd0d::601
+gw11                    CNAME   gateway-hamburg11
+gateway-hamburg12       A       10.112.30.1
+                        AAAA    fd51:2bb2:fd0d::501
+gw12                    CNAME   gateway-hamburg12
+gateway-hamburg13       A       10.112.32.1
+                        AAAA    fd51:2bb2:fd0d::401
+gw13                    CNAME   gateway-hamburg13
+
+; server
+srv01			A	10.112.1.1
+			AAAA    fd51:2bb2:fd0d::101
+
+; services
+; - services primarily for nodes must be IPv6 only
+1.updates.services	AAAA	fd51:2bb2:fd0d::901	;gw09
+2.updates.services	AAAA	fd51:2bb2:fd0d::a01	;gw07
+1.ntp.services          AAAA    fd51:2bb2:fd0d::a01	;gw07
+2.ntp.services          AAAA	fd51:2bb2:fd0d::b01	;gw08
+; - services for clients should be IPv4 & IPv6
+formular.services	CNAME	srv01
+news.services		CNAME	gw07
+sip.services		CNAME	gw07
+
+; custom
+mchai			A	10.112.0.5
+            		AAAA    fd51:2bb2:fd0d:0:fffe::1
+jabber             	A 	10.112.0.6
+			AAAA	fd51:2bb2:fd0d:0:fffe::4d10
+radio			CNAME 	jabber
+funkle	              	A   	10.112.1.1
+                    	AAAA    fd51:2bb2:fd0d::101
+suche               	CNAME   funkle
+search              	CNAME   funkle
+somakapsel              A       10.112.0.7
+                        AAAA    fd51:2bb2:fd0d:0:2acf:daff:fe04:1c53
+wp			A       10.112.0.8
+                        AAAA	fd51:2bb2:fd0d:0:BA27:EBFF:FEEC:C7AE
+baracke			A	10.112.0.9
+			AAAA	fd51:2bb2:fd0d:0:222:64ff:fe83:9279

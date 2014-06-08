@@ -1,0 +1,35 @@
+$ORIGIN .
+$TTL 7d
+112.10.in-addr.arpa	IN SOA	gateway-hamburg01.ffhh. freifunk.hamburg.ccc.de. (
+				1356797107 ; serial
+				3600       ; refresh (1 hour)
+				180        ; retry (3 minutes)
+				3600       ; expire (1 hour)
+				60         ; minimum (1 minute)
+				)
+			NS	gateway-hamburg01.ffhh.
+                        NS      srv01.ffhh.
+$ORIGIN 112.10.in-addr.arpa.
+
+; next node
+1.0			PTR	knoten.ffhh.
+
+; gateways
+1.14			PTR	gateway-hamburg01.ffhh.
+1.18                    PTR     gateway-hamburg05.ffhh.
+1.16                    PTR     gateway-hamburg07.ffhh.
+1.22                    PTR     gateway-hamburg08.ffhh.
+1.24			PTR	gateway-hamburg09.ffhh.
+1.28			PTR	gateway-hamburg11.ffhh.
+1.30			PTR	gateway-hamburg12.ffhh.
+1.32                    PTR     gateway-hamburg13.ffhh.
+
+; server
+1.1                     PTR     srv01.ffhh.
+
+; custom
+5.0			PTR	mchai.ffhh.
+6.0			PTR	jabber.ffhh.
+7.0			PTR	somakapsel.ffhh.
+8.0			PTR	wp.ffhh.
+9.0			PTR	baracke.ffhh.

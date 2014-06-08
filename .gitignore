@@ -1,0 +1,6 @@
+#alle Dateie ignorieren...
+*
+
+#ausser...
+!./master/
+!.gitignore
