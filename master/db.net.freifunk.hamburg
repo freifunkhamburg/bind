@@ -1,32 +1,28 @@
-$ORIGIN .
+$ORIGIN hamburg.freifunk.net.
 $TTL 86400	; 1 day
 hamburg.freifunk.net	IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2014022117 ; serial
+				2014061300 ; serial
 				28800      ; refresh (8 hours)
 				7200       ; retry (2 hours)
 				1209600    ; expire (2 weeks)
 				86400      ; minimum (1 day)
 				)
+
+;AUTHORATIVE NAMESERVERS				
 			NS	srv01.hamburg.freifunk.net.
 			NS	named.exosphere.de.
 			NS	ns.ohrensessel.net.
-			
+
+
+;IP OF hamburg.freifunk.net			
 			A	212.12.51.134
-;			MX	10 turing.hamburg.ccc.de.
-			MX	50 srv01.hamburg.freifunk.net.
-
-$ORIGIN _tcp.hamburg.freifunk.net.
-_stun			SRV	10 0 3478 stun.1und1.de.
-			SRV	10 0 10000 stun.sipgate.de.
-			SRV	20 0 3478 stun.dus.net.
-			SRV	30 0 3478 stun.xten.com.
-			SRV	40 0 3478 stun.ekiga.net.
-_xmpp-client		SRV	5 0 5222 srv01.hamburg.freifunk.net.
-_xmpp-server		SRV	5 0 5269 srv01.hamburg.freifunk.net.
 
 
-$ORIGIN hamburg.freifunk.net.
+;MAIL
+			MX	10 srv01.hamburg.freifunk.net.
 
+
+;GATEWAYS
 gw01			A	212.12.51.132
 gw05			A	176.9.82.134
 gw07			A	78.46.41.19
@@ -35,38 +31,26 @@ gw09			A	78.46.76.98
 gw11			A	37.187.53.153
 gw12			A	5.45.105.34
 gw13			A	62.201.165.199
-news			CNAME	gw07.hamburg.freifunk.net.
 
-formular		CNAME  srv01.hamburg.freifunk.net.
 
-1.builder		A	80.150.98.130
-; dns load balancing
-updates			A	78.46.41.19
-updates			A	78.46.76.98
-
+;INFRASTRUCTURE
 srv01			A	212.12.51.134
-ipv4.srv01		A	212.12.51.134
-mail			CNAME	srv01.hamburg.freifunk.net.
-smtp			CNAME	srv01.hamburg.freifunk.net.
-imap			CNAME	srv01.hamburg.freifunk.net.
-puppet			CNAME	srv01.hamburg.freifunk.net.
+meta			CNAME   srv01
+media			CNAME	srv01
+1.builder		A	80.150.98.130
 otrs			A	176.9.7.105
 
-blog			CNAME	hamburg.freifunk.net.
-dev			CNAME	hamburg.freifunk.net.
-map			CNAME	hamburg.freifunk.net.
-nodes			CNAME	hamburg.freifunk.net.
-wiki			CNAME	hamburg.freifunk.net.
-www			CNAME	hamburg.freifunk.net.
-forum			CNAME	hamburg.freifunk.net.
-graph			CNAME	hamburg.freifunk.net.
-karte			CNAME	hamburg.freifunk.net.
-nodes			CNAME	hamburg.freifunk.net.
-meta			CNAME   hamburg.freifunk.net.
-media			CNAME	hamburg.freifunk.net.
-postmaster		CNAME	hamburg.freifunk.net.
 
-; DNS records for automatic configuration in mail clients (outlook, thunderbird, etc.)
-autodiscover            A       212.12.51.134
-autoconfig              A       212.12.51.134
+;MAIL SERVER
+postmaster		CNAME	srv01
+mail			CNAME	srv01
+smtp			CNAME	srv01
+imap			CNAME	srv01
 
+
+;SERVICES
+www			CNAME	srv01
+formular		CNAME	srv01
+news			CNAME	gw07
+updates			CNAME	gw07 ; dns load balancing for updates
+updates			CNAME	gw09 ; dns load balancing for updates
