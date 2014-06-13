@@ -11,7 +11,7 @@ $TTL 86400	; 1 Tag
 
 ;AUTHORATIVE NAMESERVERS
 @			NS	srv01.ffhh.
-@			NS	gateway-hamburg01.ffhh.
+@			NS	gw01.ffhh.
 
 
 ;IP OF srv01
