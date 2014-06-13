@@ -52,5 +52,5 @@ imap			CNAME	srv01
 www			CNAME	srv01
 formular		CNAME	srv01
 news			CNAME	gw07
-updates			CNAME	gw07 ; dns load balancing for updates
-updates			CNAME	gw09 ; dns load balancing for updates
+updates			A	78.46.41.19	; gw07, dns load balancing for updates
+updates			A	78.46.76.98	; gw09, dns load balancing for updates
