@@ -1,6 +1,6 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 86400	; 1 day
-hamburg.freifunk.net	IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
+@			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
 				2014061300 ; serial
 				28800      ; refresh (8 hours)
 				7200       ; retry (2 hours)
@@ -9,13 +9,13 @@ hamburg.freifunk.net	IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freif
 				)
 
 ;AUTHORATIVE NAMESERVERS				
-			NS	srv01.hamburg.freifunk.net.
-			NS	named.exosphere.de.
-			NS	ns.ohrensessel.net.
+@			NS	srv01.hamburg.freifunk.net.
+@			NS	named.exosphere.de.
+@			NS	ns.ohrensessel.net.
 
 
 ;IP OF hamburg.freifunk.net			
-			A	212.12.51.134
+@			A	212.12.51.134
 
 
 ;MAIL
