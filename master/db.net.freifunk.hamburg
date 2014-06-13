@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 86400	; 1 day
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2014061300 ; serial
+				2014061400 ; serial
 				28800      ; refresh (8 hours)
 				7200       ; retry (2 hours)
 				1209600    ; expire (2 weeks)
