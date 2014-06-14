@@ -1,7 +1,7 @@
 $ORIGIN ffhh.
 $TTL 86400	; 1 Tag
 @			IN SOA	srv01.ffhh. hostmaster.hamburg.freifunk.net. (
-				2014060700 ; serial
+				2014061400 ; serial
 				3600       ; refresh (1 hour)
 				180        ; retry (3 minutes)
 				3600       ; expire (1 hour)
