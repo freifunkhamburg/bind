@@ -1,7 +1,7 @@
 $ORIGIN ffhh.
 $TTL 86400	; 1 Tag
 @			IN SOA	srv01.ffhh. hostmaster.hamburg.freifunk.net. (
-				2014061400 ; serial
+				2014061401 ; serial
 				3600       ; refresh (1 hour)
 				180        ; retry (3 minutes)
 				3600       ; expire (1 hour)
@@ -54,24 +54,34 @@ gateway-hamburg1	CNAME   gw13
 
 
 ; DIENSTE
-; verbundener Knoten
+; INFRASTRUKTURDIENSTE
+	; Updates - Dienste fuer Knoten duerfen nur IPv6 sein!
+	1.updates.services	AAAA	fd51:2bb2:fd0d::901	;gw09
+	2.updates.services	AAAA	fd51:2bb2:fd0d::a01	;gw07
+	
+	; NTP
+	1.ntp.services          AAAA    fd51:2bb2:fd0d::a01	;gw07
+	2.ntp.services          AAAA	fd51:2bb2:fd0d::b01	;gw08
+
+	; Knotenforumlar
+	formular.services	CNAME	srv01
+	formular		CNAME	formular.services
+	
+	; andere administrative Dienste
+	media.services		CNAME	srv01	; Medien
+	postfix.services	CNAME	srv01	; Seite des Mailservers
+
+; WEITERE DIENSTE
+	freifunk		CNAME	srv01	; hamburg.freifunk.net
+	knotengraph		CNAME	srv01
+	knotenkarte		CNAME	srv01
+	news			CNAME	gw07	; Newsserver
+
+; AKTUELL VERBUNDENER KNOTEN
 knoten			A	10.112.0.1
 			AAAA	fd51:2bb2:fd0d::1
 node			CNAME	knoten
 router			CNAME	knoten
-
-; Updates - Dienste fuer Knoten duerfen nur IPv6 sein!
-1.updates.services	AAAA	fd51:2bb2:fd0d::901	;gw09
-2.updates.services	AAAA	fd51:2bb2:fd0d::a01	;gw07
-
-; NTP
-1.ntp.services          AAAA    fd51:2bb2:fd0d::a01	;gw07
-2.ntp.services          AAAA	fd51:2bb2:fd0d::b01	;gw08
-
-; weitere Dienste
-formular		CNAME	srv01
-knotengraph		CNAME	srv01
-news			CNAME	gw07
 
 
 ; LOKALE DIENSTE DER FREIFUNKER_INNEN
