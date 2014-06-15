@@ -1,11 +1,11 @@
 $ORIGIN 0.0.0.0.d.0.d.f.2.b.b.2.1.5.d.f.ip6.arpa.
 $TTL 86400	; 1 Tag
 @				IN SOA	srv01.ffhh. hostmaster.hamburg.freifunk.net. (
-				2014061400 ; serial
-				3600       ; refresh (1 hour)
-				180        ; retry (3 minutes)
-				3600       ; expire (1 hour)
-				60         ; minimum (1 minute)
+				2014061500; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
+				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
+				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
+				172800	; TTL fuer negatives caching: Analog zum Standard-Caching wird im Cache vermerkt, dass dem zuständigen Nameserver der Name unbekannt war. Da für einen nicht vorhandenen Namen keine TTL existiert, steht sie hier.
 				)
 
 
