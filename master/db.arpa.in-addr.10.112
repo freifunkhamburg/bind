@@ -1,7 +1,7 @@
 $ORIGIN 112.10.in-addr.arpa.
 $TTL 86400	; 1 Tag
 @			IN SOA	srv01.ffhh. hostmaster.hamburg.ccc.de. (
-				2014082400; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2014082401; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -35,8 +35,8 @@ $TTL 86400	; 1 Tag
 
 
 ; PEERING TRANSFER
-1.64			PTR	ffhh-link.hh.de.unbedenklich.dn42
-2.64			PTR	dn42-unbedenklich-link.peering.ffhh
+1.64			PTR	ffhh-link.hh.de.unbedenklich.dn42.
+2.64			PTR	dn42-unbedenklich-link.peering.ffhh.
 
 
 ; LOKALE DIENSTE DER FREIFUNKER_INNEN
