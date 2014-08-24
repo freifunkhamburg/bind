@@ -34,6 +34,11 @@ $TTL 86400	; 1 Tag
 1.0			PTR	knoten.ffhh.
 
 
+; PEERING TRANSFER
+1.64			PTR	ffhh-link.hh.de.unbedenklich.dn42
+2.64			PTR	dn42-unbedenklich-link.peering.ffhh
+
+
 ; LOKALE DIENSTE DER FREIFUNKER_INNEN
 5.0			PTR	mchai.ffhh.
 6.0			PTR	jabber.ffhh.
