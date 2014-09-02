@@ -75,6 +75,7 @@ postmaster.services	CNAME	srv01	; Seite des Mailservers
 freifunk		CNAME	srv01	; hamburg.freifunk.net
 knotengraph		CNAME	srv01
 knotenkarte		CNAME	srv01
+start			CNAME	srv01
 news.services		CNAME	gw07		; Newsserver
 news			CNAME	news.services	; Newsserver
 
