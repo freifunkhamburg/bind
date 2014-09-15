@@ -1,7 +1,14 @@
 #alle Dateie ignorieren...
-*
+/secrets.conf
+*.private
+*.key
+/bind.keys
+db*
+/slave/ffa.zone
+/zones.rfc1918
 
 #ausser...
+!named.conf
 !/master
 !/master/*
 !.gitignore
