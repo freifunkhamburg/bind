@@ -1,7 +1,7 @@
 $ORIGIN ffhh.
 $TTL 86400	; 1 Tag
 @			IN SOA	srv01.ffhh. hostmaster.hamburg.freifunk.net. (
-				2014122001; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2014122100; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -11,7 +11,7 @@ $TTL 86400	; 1 Tag
 
 ;AUTHORATIVE NAMESERVER
 @			NS	srv01.ffhh.
-@			NS	gw01.ffhh.
+;@			NS	gw01.ffhh.
 
 
 ;SERVERS
@@ -22,10 +22,6 @@ srv02			A	10.112.1.2
 			AAAA    fd51:2bb2:fd0d::102
 
 ;GATEWAYS
-gw01			A	10.112.14.1
-			AAAA	fd51:2bb2:fd0d::e01
-gateway-hamburg01	CNAME 	gw01
-
 gw02			A	10.112.42.1
 			AAAA	fd51:2bb2:fd0d::201
 
@@ -34,27 +30,18 @@ gw03			A	10.112.1.3
 
 gw05			A       10.112.18.1
                         AAAA    fd51:2bb2:fd0d::d01
-gateway-hamburg05	CNAME   gw05
 
 gw07			A       10.112.16.1
                         AAAA    fd51:2bb2:fd0d::a01
-gateway-hamburg07	CNAME	gw07
 
 gw08			A       10.112.22.1
                         AAAA    fd51:2bb2:fd0d::b01
-gateway-hamburg08	CNAME	gw08
 
 gw09			A       10.112.24.1
                         AAAA    fd51:2bb2:fd0d::901
-gateway-hamburg09       CNAME   gw09
-
-gw11			A       10.112.28.1
-                        AAAA    fd51:2bb2:fd0d::601
-gateway-hamburg11       CNAME   gw11
 
 gw12			A	10.112.30.1
                         AAAA    fd51:2bb2:fd0d::501
-gateway-hamburg12	CNAME   gw12
 
 
 ; DIENSTE
