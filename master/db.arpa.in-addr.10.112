@@ -22,7 +22,7 @@ $TTL 86400	; 1 Tag
 1.42			PTR	gw02.ffhh.
 3.1			PTR	gw03.ffhh.
 1.18                    PTR     gw05.ffhh.
-1.16                    PTR     gw07.ffhh.
+7.1			PTR     gw07.ffhh.
 1.22                    PTR     gw08.ffhh.
 1.24			PTR	gw09.ffhh.
 1.28			PTR	gw11.ffhh.
