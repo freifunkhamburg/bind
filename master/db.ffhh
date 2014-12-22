@@ -1,7 +1,7 @@
 $ORIGIN ffhh.
 $TTL 86400	; 1 Tag
 @			IN SOA	srv01.ffhh. hostmaster.hamburg.freifunk.net. (
-				2014122101; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2014122200; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -51,8 +51,8 @@ gw12			A	10.112.1.12
 2.updates.services	AAAA	fd51:2bb2:fd0d::a01	;gw07
 
 ; NTP
-1.ntp.services          AAAA    fd51:2bb2:fd0d::a01	;gw07
-2.ntp.services          AAAA	fd51:2bb2:fd0d::b01	;gw08
+1.ntp.services          AAAA    fd51:2bb2:fd0d::101	;srv01
+2.ntp.services          AAAA	fd51:2bb2:fd0d::102	;srv02
 
 ; Knotenforumlar
 formular.services	CNAME	srv01
