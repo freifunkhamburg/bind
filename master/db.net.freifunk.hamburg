@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Tag
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2014122200; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				2014122201; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -51,10 +51,9 @@ srv01			A	212.12.51.134
 srv02			A	213.128.138.162 
 			AAAA	2001:868:100:d00::15
 meta			CNAME   srv01
-media			A       78.46.41.19 ; gw07
-			AAAA	2001:bf7:180::a01 ; gw07
+media			CNMAE	gw07
 1.builder		A	80.150.98.130
-otrs			A	176.9.82.134
+otrs			CNAME	gw07
 
 ;physical hosts
 host01			AAAA	2a00:ea8:100:8::3 ; n@work
