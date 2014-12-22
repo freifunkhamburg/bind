@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Tag
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2014122100; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				2014122200; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -16,7 +16,7 @@ $TTL 3600	; 1 Tag
 
 ;IP OF hamburg.freifunk.net			
 @			A	212.12.51.134
-@			AAAA	2001:bf7:180::101
+@			AAAA	2a03:2267::101
 
 
 ;MAIL
@@ -41,40 +41,33 @@ gw09			A	78.46.76.98
                         AAAA    2a01:4f8:120:438c::2
 gw12			A	5.45.105.34
 
-;IPv6 CAPABLE GATEWAYS
-gw05v6			A	176.9.82.134
-gw05v6			AAAA	2a01:4f8:151:2089:b000:f2ee:2ad1:0
-
 ; ICVPN
-02.icvpn 		A 	213.238.45.66
-	 		AAAA 	2a00:ea8:100:8::4
-03.icvpn		A	213.128.138.161
-			AAAA    2001:868:100:d00::20
+02.icvpn 		CNAME	gw02
+03.icvpn		CNAME	gw03
 
 ;INFRASTRUCTURE
 srv01			A	212.12.51.134
-srv02			A	176.9.7.123
-; - srv01 dual stack separated because of MX record
-srv01v6			A	212.12.51.134
-srv01v6			AAAA	2001:bf7:180::101
-meta			CNAME   srv01v6
+			AAAA	2a03:2267::101
+srv02			A	213.128.138.162 
+			AAAA	2001:868:100:d00::15
+meta			CNAME   srv01
 media			A       78.46.41.19 ; gw07
-media			AAAA	2001:bf7:180::a01 ; gw07
+			AAAA	2001:bf7:180::a01 ; gw07
 1.builder		A	80.150.98.130
 otrs			A	176.9.82.134
 
 ;physical hosts
-host01			AAAA	2a00:ea8:100:8::3
-host02			AAAA     2001:868:100:d00::5
+host01			AAAA	2a00:ea8:100:8::3 ; n@work
+host02			AAAA    2001:868:100:d00::5 ; IPHH
 
 ;BGP BACKBONE
-wandale0		AAAA	2a00:ea8:100:8::2
-wende0			AAAA	2001:868:100:d00::10
+wandale0		AAAA	2a00:ea8:100:8::2 ; n@work
+wende0			AAAA	2001:868:100:d00::10 ; IPHH 
 
 ;SERVICES
-www			CNAME	srv01v6
-formular		CNAME	srv01v6
-graph			CNAME	srv01v6
+www			CNAME	srv01
+formular		CNAME	srv01
+graph			CNAME	srv01
 news			CNAME	gw07
 git                     CNAME   srv01
 updates			A	78.46.41.19	; gw07, dns load balancing for updates
