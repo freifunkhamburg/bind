@@ -1,7 +1,7 @@
 $ORIGIN ffhh.
 $TTL 86400	; 1 Tag
 @			IN SOA	srv01.ffhh. hostmaster.hamburg.freifunk.net. (
-				2014122400; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2014122600; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -65,7 +65,7 @@ git.services    	CNAME	srv01
 opkg.services		AAAA    fd51:2bb2:fd0d::101
 
 ; andere administrative Dienste
-media.services		CNAME	gw07	; Medien
+media.services		CNAME	srv01	; Medien
 postmaster.services	CNAME	srv01	; Seite des Mailservers
 
 ; WEITERE DIENSTE
