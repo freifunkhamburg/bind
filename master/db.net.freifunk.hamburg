@@ -46,7 +46,7 @@ gw12			A	5.45.105.34
 ; ICVPN
 02.icvpn 		CNAME	gw02
 03.icvpn		CNAME	gw03
-31c3.icvpn      	CNAM	31c3  
+31c3.icvpn      	CNAME	31c3  
 
 ;INFRASTRUCTURE
 srv01			A	212.12.51.134
