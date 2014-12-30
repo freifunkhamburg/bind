@@ -1,0 +1,41 @@
+$ORIGIN 0.0.0.0.0.0.0.0.7.6.2.2.3.0.a.2.ip6.arpa.
+$TTL 86400	; 1 Tag
+@				IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
+				2014122300; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
+				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
+				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
+				172800	; TTL fuer negatives caching: Analog zum Standard-Caching wird im Cache vermerkt, dass dem zuständigen Nameserver der Name unbekannt war. Da für einen nicht vorhandenen Namen keine TTL existiert, steht sie hier.
+				)
+
+
+;AUTHORATIVE NAMESERVERS
+@				NS      srv01.hamburg.freifunk.net.
+;@				NS	gw01.hamburg.freifunk.net.
+
+
+;INFRASTRUKTUR
+1.0.1.0.0.0.0.0.0.0.0.0.0.0.0.0	PTR	srv01.hamburg.freifunk.net.
+1.0.2.0.0.0.0.0.0.0.0.0.0.0.0.0	PTR	gw02.hamburg.freifunk.net.
+1.0.3.0.0.0.0.0.0.0.0.0.0.0.0.0	PTR	gw03.hamburg.freifunk.net.
+1.0.d.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR	gw05.hamburg.freifunk.net.
+1.0.a.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR	gw07.hamburg.freifunk.net.
+1.0.b.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR	gw08.hamburg.freifunk.net.
+1.0.9.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR	gw09.hamburg.freifunk.net.
+1.0.6.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR	gw11.hamburg.freifunk.net.
+1.0.5.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR	gw12.hamburg.freifunk.net.
+
+
+; DIENSTE
+; verbundener Knoten
+1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR	knoten.ffhh.
+
+
+; LOKALE DIENSTE DER FREIFUNKER_INNEN
+1.0.0.0.0.0.0.0.0.0.0.0.e.f.f.f PTR	mchai.ffhh.
+0.1.d.4.0.0.0.0.0.0.0.0.e.f.f.f PTR	jabber.ffhh.
+3.5.c.1.4.0.e.f.f.f.a.d.f.c.a.2 PTR	somakapsel.ffhh.
+e.a.7.c.c.e.e.f.f.f.b.e.7.2.a.b PTR	wp.ffhh.
+9.7.2.9.3.8.e.f.f.f.4.6.2.2.2.0 PTR	baracke.ffhh.
+3.1.0.b.1.9.e.f.f.f.0.0.4.5.0.5 PTR	monitor.ffhh.
+0.a.9.4.2.0.e.f.f.f.b.e.7.2.a.b PTR	rasfi.ffhh.
