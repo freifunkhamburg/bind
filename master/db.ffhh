@@ -92,7 +92,7 @@ cryptpad		A	172.22.179.129
 
 ; LOKALE DIENSTE DER FREIFUNKER_INNEN
 mchai			A	10.112.0.5
-            		AAAA    2a03:2267::fffe::1
+            		AAAA    2a03:2267::fffe:0000:0000:1
             		
 jabber             	A 	10.112.0.6
 			AAAA	2a03:2267::227:EFF:FE06:23FC
