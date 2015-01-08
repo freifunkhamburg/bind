@@ -37,6 +37,6 @@ $TTL 86400	; 1 Tag
 6.0			PTR	jabber.ffhh.
 7.0			PTR	somakapsel.ffhh.
 8.0			PTR	wp.ffhh.
-9.0			PTR	paste.ffhh.
+9.0			PTR	ifconfig.ffhh.
 15.0			PTR	monitor.ffhh.
 17.0			PTR	rasfi.ffhh.

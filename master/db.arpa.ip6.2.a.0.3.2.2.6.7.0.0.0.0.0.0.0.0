@@ -37,6 +37,6 @@ $TTL 86400	; 1 Tag
 0.1.d.4.0.0.0.0.0.0.0.0.e.f.f.f PTR	jabber.ffhh.
 3.5.c.1.4.0.e.f.f.f.a.d.f.c.a.2 PTR	somakapsel.ffhh.
 e.a.7.c.c.e.e.f.f.f.b.e.7.2.a.b PTR	wp.ffhh.
-5.b.4.a.d.3.e.f.f.f.b.e.7.2.a.b PTR	paste.ffhh.
+5.b.4.a.d.3.e.f.f.f.b.e.7.2.a.b PTR	ifconfig.ffhh.
 3.1.0.b.1.9.e.f.f.f.0.0.4.5.0.5 PTR	monitor.ffhh.
 0.a.9.4.2.0.e.f.f.f.b.e.7.2.a.b PTR	rasfi.ffhh.

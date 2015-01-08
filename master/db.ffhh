@@ -105,8 +105,15 @@ wp			A       10.112.0.8
                         AAAA	2a03:2267::BA27:EBFF:FEEC:C7AE
                         
 paste			A	10.112.0.9
-			AAAA	2a03:2267::ba27:ebff:fe3d:a4b5
+    			AAAA	2a03:2267::ba27:ebff:fe3d:a4b5
 			
+ifconfig		A	10.112.0.9
+                        AAAA	2a03:2267::ba27:ebff:fe3d:a4b5
+
+4.ifconfig		A	10.112.0.9
+
+6.ifconfig		AAAA	2a03:2267::ba27:ebff:fe3d:a4b5
+
 blackspear		A	10.112.0.12
 			AAAA	2a03:2267::BA27:EBFF:FEB8:CE2D
 			
