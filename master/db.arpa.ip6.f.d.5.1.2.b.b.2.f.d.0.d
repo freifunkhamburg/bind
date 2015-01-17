@@ -1,7 +1,7 @@
 $ORIGIN 0.0.0.0.d.0.d.f.2.b.b.2.1.5.d.f.ip6.arpa.
 $TTL 86400	; 1 Tag
 @				IN SOA	srv01.ffhh. hostmaster.hamburg.freifunk.net. (
-				2015011300; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2015011700; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -38,3 +38,4 @@ e.a.7.c.c.e.e.f.f.f.b.e.7.2.a.b PTR	wp.ffhh.
 5.b.4.a.d.3.e.f.f.f.b.e.7.2.a.b PTR	ifconfig.ffhh.
 3.1.0.b.1.9.e.f.f.f.0.0.4.5.0.5 PTR	monitor.ffhh.
 0.a.9.4.2.0.e.f.f.f.b.e.7.2.a.b PTR	rasfi.ffhh.
+2.6.7.2.7.5.e.f.f.f.d.9.6.6.e.7 PTR	seven.ffhh.
