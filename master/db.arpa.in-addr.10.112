@@ -1,13 +1,13 @@
 $ORIGIN 112.10.in-addr.arpa.
 $TTL 86400	; 1 Tag
 @			IN SOA	srv01.ffhh. hostmaster.hamburg.ccc.de. (
-				2015011200; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2015011700; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
 				172800	; TTL fuer negatives caching: Analog zum Standard-Caching wird im Cache vermerkt, dass dem zuständigen Nameserver der Name unbekannt war. Da für einen nicht vorhandenen Namen keine TTL existiert, steht sie hier.
 				)
-				
+
 
 ; AUTHORATIVE NAMESERVER
 @                       NS      srv01.ffhh.
@@ -40,3 +40,4 @@ $TTL 86400	; 1 Tag
 9.0			PTR	ifconfig.ffhh.
 15.0			PTR	monitor.ffhh.
 17.0			PTR	rasfi.ffhh.
+19.0			PTR	seven.ffhh.
