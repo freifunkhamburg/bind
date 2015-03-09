@@ -1,7 +1,7 @@
 $ORIGIN 0.0.0.0.0.0.0.0.7.6.2.2.3.0.a.2.ip6.arpa.upstream.
 $TTL 86400	; 1 Tag
 @				IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2015021701; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2015030900; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -13,6 +13,8 @@ $TTL 86400	; 1 Tag
 @				NS      srv01.hamburg.freifunk.net.
 ;@				NS	gw01.hamburg.freifunk.net.
 
+;NETWORK
+0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0	PTR	mesh.hamburg.freifunk.net.
 
 ;INFRASTRUKTUR
 1.0.1.0.0.0.0.0.0.0.0.0.0.0.0.0	PTR	srv01.hamburg.freifunk.net.
@@ -41,3 +43,4 @@ e.a.7.c.c.e.e.f.f.f.b.e.7.2.a.b PTR	wp.ffhh.
 3.1.0.b.1.9.e.f.f.f.0.0.4.5.0.5 PTR	monitor.ffhh.
 0.a.9.4.2.0.e.f.f.f.b.e.7.2.a.b PTR	rasfi.ffhh.
 2.6.7.2.7.5.e.f.f.f.d.9.6.6.e.7 PTR	seven.ffhh.
+2.8.c.7.4.3.e.f.f.f.b.e.7.2.a.b PTR	testessel.ffhh.
