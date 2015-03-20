@@ -1,7 +1,7 @@
 $ORIGIN ffhh.
 $TTL 86400	; 1 Tag
 @			IN SOA	srv01.ffhh. hostmaster.hamburg.freifunk.net. (
-				2015030900; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2015032000; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -76,6 +76,7 @@ freifunk		CNAME	srv01	; hamburg.freifunk.net
 knotengraph		CNAME	srv01
 knotenkarte		CNAME	srv01
 start			CNAME	srv01
+ldap.services   CNAME   srv02
 news.services		CNAME	srv02		; Newsserver
 news			CNAME	news.services	; Newsserver
 
