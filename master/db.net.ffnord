@@ -1,0 +1,47 @@
+$ORIGIN ffnord.net.
+$TTL 3600	; 1 Tag
+@			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
+				2015050100; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
+				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
+				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
+				172800	; TTL fuer negatives caching: Analog zum Standard-Caching wird im Cache vermerkt, dass dem zuständigen Nameserver der Name unbekannt war. Da für einen nicht vorhandenen Namen keine TTL existiert, steht sie hier.
+				)
+
+;AUTHORATIVE NAMESERVERS				
+@			NS	srv01.hamburg.freifunk.net.
+@			NS	named.exosphere.de.
+;@			NS	ns.ohrensessel.net.
+
+
+;IP OF ffnord.net
+@			A	212.12.51.134
+@     AAAA  2a03:2267::101
+
+
+;GATEWAYS
+gw01	A     213.128.138.161       ; gw03.ffhh
+      AAAA  2001:868:100:d00::20  ; gw03.ffhh
+
+;INFRASTRUCTURE
+
+;SERVICES
+www   A     212.12.51.134
+      AAAA  2a03:2267::101
+
+updates			A     212.12.51.134       ; srv01.ffhh, dns load balancing for updates
+            AAAA	2a03:2267::101
+updates			A     213.128.138.162     ; srv02.ffhh, dns load balancing for updates
+            AAAA  2001:868:100:d00::15
+
+conference  A     213.128.138.162
+            AAAA  2001:868:100:d00::15
+xmpp        A     213.128.138.162
+            AAAA  2001:868:100:d00::15 
+_xmpp-client._tcp             SRV 	10 0 5222 xmpp.ffnord.net.
+_xmpp-client._tcp             SRV 	20 0 5222 srv01.hamburg.freifunk.net.
+_xmpp-server._tcp             SRV 	10 0 5269 xmpp.ffnord.net.
+_xmpp-server._tcp	 	          SRV 	20 0 5269 srv01.hamburg.freifunk.net.
+_xmpp-server._tcp.conference  SRV 	10 0 5269 xmpp.ffnord.net.
+_xmpp-server._tcp.conference  SRV 	20 0 5269 srv01.hamburg.freifunk.net.
+
