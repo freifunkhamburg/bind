@@ -11,7 +11,7 @@ $TTL 3600	; 1 Tag
 ;AUTHORATIVE NAMESERVERS				
 @			NS	srv01.hamburg.freifunk.net.
 @			NS	named.exosphere.de.
-;@			NS	ns.ohrensessel.net.
+@			NS	ns.ohrensessel.net.
 
 
 ;IP OF knotenkarte.de
