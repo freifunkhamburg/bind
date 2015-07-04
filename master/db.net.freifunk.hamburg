@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Tag
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2015062800; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				2015070400; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -52,12 +52,12 @@ srv02			A	193.96.224.250
 meta			CNAME   srv01
 media			A	212.12.51.134	; srv01, dns load balancing
 			AAAA	2a03:2267::101
-media			A	193.96.224.250	; srv02, dns load balancing
-                        AAAA    2a03:2267:ffff:b00::3
+;media			A	193.96.224.250	; srv02, dns load balancing
+;                        AAAA    2a03:2267:ffff:b00::3
 1.builder		A	80.150.98.130
 
 ;reverse dns for clients
-clients			NS 	srv02
+;clients			NS 	srv02
 
 ;physical hosts
 host01			AAAA	2a00:ea8:100:8::3	; n@work
@@ -84,11 +84,11 @@ www			CNAME	srv01
 formular		CNAME	srv01
 graph			CNAME	srv01
 map			CNAME	srv01
-news			CNAME	srv02
+;news			CNAME	srv02
 git                     CNAME   srv01
-otrs                    CNAME   srv02
-support                 CNAME   srv02
-ldap        CNAME   srv02
+;otrs                    CNAME   srv02
+;support                 CNAME   srv02
+;ldap        CNAME   srv02
 updates			A	212.12.51.134	; srv01, dns load balancing
 			AAAA	2a03:2267::101
 ;updates			A	193.96.224.250	; srv02, dns load balancing
