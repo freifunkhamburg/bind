@@ -1,7 +1,7 @@
 $ORIGIN ffnord.net.
 $TTL 3600	; 1 Tag
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2015071000; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				2015071400; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -38,7 +38,7 @@ i	NS	ins.ffnord.net.
 ins	A	144.76.72.235	
 
 ; Jabber
-conference	CNAME srv01.hamburg.freifunk.net
+conference	CNAME srv01.hamburg.freifunk.net.
 ;_xmpp-client._tcp             SRV  10 0 5222 srv02.hamburg.freifunk.net.
 _xmpp-client._tcp             SRV  20 0 5222 srv01.hamburg.freifunk.net.
 ;_xmpp-server._tcp             SRV  10 0 5269 srv02.hamburg.freifunk.net.
