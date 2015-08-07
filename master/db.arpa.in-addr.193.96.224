@@ -1,7 +1,7 @@
 $ORIGIN 224.96.193.in-addr.arpa.
 $TTL 86400	; 1 Tag
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.ccc.de. (
-				2015080602; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2015080700; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -18,6 +18,8 @@ $TTL 86400	; 1 Tag
 
 
 ; SERVICES. For now take addresses between .240 and .255 (/28)
+; Each BGP VM has a /30 to connect one other VM on the specific host
+241			PTR	host-link.suede0.hamburg.freifunk.net.
 245			PTR	host-link.wandale0.hamburg.freifunk.net.
 249			PTR	host-link.wende0.hamburg.freifunk.net.
 250			PTR	srv02.hamburg.freifunk.net.
