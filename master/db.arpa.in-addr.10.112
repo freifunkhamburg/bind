@@ -1,7 +1,7 @@
 $ORIGIN 112.10.in-addr.arpa.
 $TTL 86400	; 1 Tag
 @			IN SOA	srv01.ffhh. hostmaster.hamburg.ccc.de. (
-				2015053000; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2015081200; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -28,6 +28,7 @@ $TTL 86400	; 1 Tag
 ; DIENSTE
 ; verbundener Knoten
 1.0			PTR	knoten.ffhh.
+1.128			PTR	camp.ffhh.
 
 ; LOKALE DIENSTE DER FREIFUNKER_INNEN
 5.0			PTR	mchai.ffhh.
