@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Tag
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2015100300; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				2015100400; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -53,7 +53,7 @@ meta			CNAME   srv01
 media			A	212.12.51.134	; srv01, dns load balancing
 			AAAA	2a03:2267::101
 media			A	193.96.224.250	; srv02, dns load balancing
-            AAAA    2a03:2267:ffff:b00::3
+			AAAA    2a03:2267:ffff:b00::3
 1.builder		A	80.150.98.130
 
 ;reverse dns for clients
@@ -84,17 +84,15 @@ suede0-link.gw01	AAAA	2a03:2267:ffff:0c00::2
 ;SERVICES
 www			CNAME	srv01
 formular		CNAME	srv01
-graph			CNAME	srv01
 map			CNAME	srv01
 news			CNAME	srv02
 git                     CNAME   srv01
-;otrs                    CNAME   srv02
+;otr			CNAME   srv02
 support                 CNAME   srv02
-;ldap        CNAME   srv02
+;ldap			CNAME   srv02
 updates			A	212.12.51.134	; srv01, dns load balancing
 			AAAA	2a03:2267::101
 updates			A	193.96.224.250	; srv02, dns load balancing
-            AAAA    2a03:2267:ffff:b00::3
-smokeping	CNAME	hh01s01.unbedenklich.net.
-statistik	CNAME	ff.besaid.de.
-
+			AAAA    2a03:2267:ffff:b00::3
+smokeping		CNAME	hh01s01.unbedenklich.net.
+statistik		CNAME	ff.besaid.de.
