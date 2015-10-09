@@ -1,7 +1,7 @@
 $ORIGIN ffnord.
 $TTL 86400	; 1 Tag
 @			IN SOA	srv01.ffhh. hostmaster.hamburg.freifunk.net. (
-				20150320800; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				20151009200; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVVV, VVV=3-Stellige-Version) 
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -13,11 +13,17 @@ $TTL 86400	; 1 Tag
 @			NS	srv01.ffhh.
 
 ;GATEWAYS
-gw01  A     10.187.1.1
-;     AAAA  2a03:2267:4e16:01ad::101
+gw00		A		89.163.225.200 ; gateway server at webtropia.com
+vpn0		CNAME	gw00
+gw0			CNAME	gw00
 
-gw02  A     10.187.1.2
+gw01		A		10.187.1.1
+;			AAAA	2a03:2267:4e16:01ad::101
+vpn1		CNAME	gw01
+
+gw02		A		10.187.1.2
 ;			AAAA	2a03:2267:4e16:01ad::201
+vpn2		CNAME	gw02
 
 ; DIENSTE
 ; INFRASTRUKTURDIENSTE
@@ -26,8 +32,14 @@ gw02  A     10.187.1.2
 2.updates.services	AAAA	2a03:2267::102	;srv02
 
 ; NTP
-1.ntp.services  AAAA  2a03:2267::101	;ffhh srv01
+1.ntp.services  AAAA	2a03:2267::101	;ffhh srv01
 2.ntp.services  AAAA	2a03:2267::102	;ffhh srv02
+
+ffnord-services		A	89.163.225.200
+
+; Knotenforumlar
+formular		CNAME	ffnord-services
+mesh			CNAME	ffnord-services
 
 ; opkg reverse proxy
 opkg.services		AAAA    2a03:2267::101  ;ffhh srv01
