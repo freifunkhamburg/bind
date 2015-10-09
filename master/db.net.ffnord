@@ -1,7 +1,7 @@
 $ORIGIN ffnord.net.
 $TTL 3600	; 1 Tag
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2015100900; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				2015100901; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -26,7 +26,7 @@ vpn0	A	89.163.225.200	; gw @ webtropia.com
 
 ;SERVICES
 www	A	188.40.132.218
-formular CNAM	www
+formular CNAME	www
 mesh	CNAME	www
 con	CNAME	srv01.hamburg.freifunk.net.
 
