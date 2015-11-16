@@ -33,6 +33,7 @@ $TTL 86400	; 1 Tag
 7.0			PTR	somakapsel.ffhh.
 9.0			PTR	ifconfig.ffhh.
 12.0			PTR	igelcam.ffhh.
+13.0			PTR	brachvogel.ffhh.
 15.0			PTR	monitor.ffhh.
 20.0			PTR	testsessel.ffhh.
 21.0			PTR	cloud.ffhh.
