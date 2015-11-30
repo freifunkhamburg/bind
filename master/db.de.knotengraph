@@ -1,7 +1,7 @@
 $ORIGIN knotengraph.de.
 $TTL 3600	; 1 Tag
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2015061500; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				2015113000; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -15,5 +15,4 @@ $TTL 3600	; 1 Tag
 
 
 ;IP OF knotengraph.de
-@	A	212.12.51.134
-@	AAAA	2a03:2267::101
+@	CNAME	srv02.hamburg.freifunk.net.
