@@ -48,7 +48,7 @@ srv01			A	212.12.51.134
 srv02			A	193.96.224.250
 			AAAA	2a03:2267:ffff:b00::3
 srv04			A	80.252.100.116
-                	MX  	srv04	
+                	MX  	10 srv04.freifunk.hamburg.de.
 meta			CNAME   srv02
 media			A	212.12.51.134	; srv01, dns load balancing
 			AAAA	2a03:2267::101
