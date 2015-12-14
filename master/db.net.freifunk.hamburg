@@ -1,20 +1,20 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Tag
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2015120100; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				2015121400; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
 				172800	; TTL fuer negatives caching: Analog zum Standard-Caching wird im Cache vermerkt, dass dem zuständigen Nameserver der Name unbekannt war. Da für einen nicht vorhandenen Namen keine TTL existiert, steht sie hier.
 				)
 
-;AUTHORATIVE NAMESERVERS				
+;AUTHORATIVE NAMESERVERS
 @			NS	srv01.hamburg.freifunk.net.
 @			NS	named.exosphere.de.
 @			NS	ns.ohrensessel.net.
 
 
-;IP OF hamburg.freifunk.net			
+;IP OF hamburg.freifunk.net
 @			A	212.12.51.134
 @			AAAA	2a03:2267::101
 
@@ -33,7 +33,7 @@ gw01			A       80.252.100.115
 gw02                    A       213.238.45.66
                         AAAA    2a00:ea8:100:8::4
 gw03			A	213.128.138.161
-			AAAA    2001:868:100:d00::20          
+			AAAA    2001:868:100:d00::20
 gw06			CNAME 	gw01
 gw04			CNAME	gw03
 
@@ -47,7 +47,8 @@ srv01			A	212.12.51.134
 			AAAA	2a03:2267::101
 srv02			A	193.96.224.250
 			AAAA	2a03:2267:ffff:b00::3
-srv04			A	80.252.100.116			
+srv04			A	80.252.100.116
+                	MX  	10 srv04.freifunk.hamburg.de.
 meta			CNAME   srv02
 media			A	212.12.51.134	; srv01, dns load balancing
 			AAAA	2a03:2267::101
