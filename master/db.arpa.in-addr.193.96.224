@@ -1,7 +1,7 @@
 $ORIGIN 224.96.193.in-addr.arpa.
 $TTL 86400	; 1 Tag
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.ccc.de. (
-				2015110601; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2015122201; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -89,3 +89,13 @@ $TTL 86400	; 1 Tag
 41			PTR	nat-41-vpn01.bremen.freifunk.net.
 42			PTR	nat-42-vpn03.bremen.freifunk.net.
 43			PTR	nat-43-vpn03.bremen.freifunk.net.
+
+; gw 32c3
+44			PTR	nat-44-gw32.hamburg.freifunk.net.
+45			PTR	nat-45-gw32.hamburg.freifunk.net.
+46			PTR	nat-46-gw32.hamburg.freifunk.net.
+47			PTR	nat-47-gw32.hamburg.freifunk.net.
+48			PTR	nat-48-gw32.hamburg.freifunk.net.
+49			PTR	nat-49-gw32.hamburg.freifunk.net.
+50			PTR	nat-50-gw32.hamburg.freifunk.net.
+51			PTR	nat-51-gw32.hamburg.freifunk.net.
