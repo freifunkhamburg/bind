@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Tag
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2016010502; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				2016010601; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -37,7 +37,8 @@ gw02                    A       213.238.45.66
 gw03			A	213.128.138.161
 			AAAA    2001:868:100:d00::20
 gw06			CNAME 	gw01
-gw04			CNAME	gw03
+gw04			A	193.96.224.249
+			AAAA    2a03:2267:ffff:b00::4
 
 ; ICVPN
 01.icvpn                CNAME   gw01
