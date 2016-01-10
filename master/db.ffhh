@@ -106,3 +106,7 @@ monitor			A	10.112.0.15
 testsessel		A	10.112.0.20
 			AAAA	2a03:2267::ba27:ebff:fe34:7c82
 			
+;Settings for Domain herbrich.ffhh.
+ns.herbrich.ffhh. IN A 10.112.0.14
+IN AAAA 2a03:2267::b4ad:267b:ca48:cef9
+herbrich.ffhh. IN NS ns.herbrich.ffhh.
