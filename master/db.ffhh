@@ -108,4 +108,5 @@ testsessel		A	10.112.0.20
 			
 ; Delegierung von herbrich.ffhh an eigenen name server (ich hoffe das ist so richtig)
 ns.herbrich.ffhh	A	10.112.0.14
+			AAAA	2a03:2267::b4ad:267b:ca48:cef9
               IN      NS     ns.herbrich.ffhh.
