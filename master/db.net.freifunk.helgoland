@@ -38,3 +38,4 @@ formular	A	212.12.51.134	; srv01.ffhh
 		AAAA	2a03:2267::101
 karte		CNAME	srv01
 meta		CNAME 	srv01
+git		CNAME	srv01
