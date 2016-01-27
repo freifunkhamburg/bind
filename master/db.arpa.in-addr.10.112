@@ -15,6 +15,7 @@ $TTL 86400	; 1 Tag
 
 ; Dokumentation
 ; Hamburg 	10.112.0.0/18
+; Hamburg2	10.112.192.0/18
 
 ; Server
 1.1                     PTR     srv01.ffhh.
