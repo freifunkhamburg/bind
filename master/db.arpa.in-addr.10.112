@@ -13,6 +13,8 @@ $TTL 86400	; 1 Tag
 @                       NS      srv01.ffhh.
 ;@			NS	gw01.ffhh.
 
+; Dokumentation
+; Hamburg 	10.112.0.0/18
 
 ; Server
 1.1                     PTR     srv01.ffhh.
