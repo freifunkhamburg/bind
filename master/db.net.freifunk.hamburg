@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Tag
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2016021600; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				2016022600; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -61,6 +61,10 @@ media			A	193.96.224.250	; srv02
 
 ;reverse dns for clients
 clients			NS 	srv03
+
+;dns for nodes
+nodes           NS  srv02
+nodes           NS  ns.ohrensessel.net.
 
 ;physical hosts
 host01			AAAA	2a00:ea8:100:8::3	; n@work
