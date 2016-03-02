@@ -45,7 +45,7 @@ gw08			A       10.112.1.8
 2.updates.services	AAAA	2a03:2267::102	;srv02
 
 ; NTP
-1.ntp.services          AAAA    2a03:2267::101	;srv01
+1.ntp.services          AAAA    2a03:2267::301	;gw03
 2.ntp.services          AAAA	2a03:2267::102	;srv02
 
 ; Knotenforumlar
