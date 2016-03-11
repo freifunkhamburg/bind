@@ -110,3 +110,4 @@ statistik		CNAME	ff.besaid.de.
 cloud			A	193.96.224.238
 			AAAA	2a03:2267::224:21ff:fe2e:63f9
 chat			AAAA	2a03:2267::68b3:f1c9:2067:688a	; Eine rocket.chat-Installation
+list			CNAME	srv04
