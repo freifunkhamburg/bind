@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Tag
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2016040200; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				2016040600; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -70,15 +70,14 @@ nodes           NS  ns.ohrensessel.net.
 ;physical hosts
 host01			AAAA	2a00:ea8:100:8::3	; n@work
 			A	212.12.38.182
-host02			AAAA    2001:868:100:d00::5	; IPHH
-			A	213.128.138.162
+host02			AAAA    2001:868:100:d00::1000	; IPHH
 host03			AAAA	2a00:1f78:c:e::d	; artfiles
 host04			CNAME	host01
 
 ;BGP BACKBONE
 wandale0		A	212.12.38.182		; n@work
 			AAAA	2a00:ea8:100:8::2
-wende0			A	213.128.138.162		; IPHH
+wende1			A	213.128.138.162		; IPHH
 			AAAA	2001:868:100:d00::10
 suede0			A	80.252.100.118		; artfiles
 			AAAA	2a00:1f78:c:e::e
@@ -86,9 +85,9 @@ suede0			A	80.252.100.118		; artfiles
 ;BGP/host links
 host-link.wandale0	AAAA	2a03:2267:ffff:0a00::1
 wandale0-link.gw02	AAAA	2a03:2267:ffff:0a00::2
-host-link.wende0	AAAA	2a03:2267:ffff:0b00::1
-wende0-link.gw03	AAAA	2a03:2267:ffff:0b00::2
-ffhl-link.wende0	AAAA	2a03:2267:ffff:0b01::1
+host-link.wende1	AAAA	2a03:2267:ffff:0b00::1
+wende1-link.gw03	AAAA	2a03:2267:ffff:0b00::2
+ffhl-link.wende1	AAAA	2a03:2267:ffff:0b01::1
 host-link.suede0	AAAA	2a03:2267:ffff:0c00::1
 suede0-link.gw01	AAAA	2a03:2267:ffff:0c00::2
 
