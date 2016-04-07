@@ -1,0 +1,70 @@
+$ORIGIN 112.64.100.in-addr.arpa.
+$TTL 86400	; 1 Tag
+@			IN SOA	srv01.ffhh. hostmaster.hamburg.ccc.de. (
+				2016040700; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
+				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
+				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
+				172800	; TTL fuer negatives caching: Analog zum Standard-Caching wird im Cache vermerkt, dass dem zuständigen Nameserver der Name unbekannt war. Da für einen nicht vorhandenen Namen keine TTL existiert, steht sie hier.
+				)
+
+
+; AUTHORATIVE NAMESERVER
+@                       NS      srv01.ffhh.
+;@			NS	gw01.ffhh.
+
+; Transfernetze
+
+;0 net
+1			PTR	wende1-link.suede0.hamburg.freifunk.net.
+2			PTR	suede0-link.wende1.hamburg.freifunk.net.
+;3 broadcast
+
+;4 net
+5			PTR	host01-link.suede0.hamburg.freifunk.net.
+6			PTR	suede0-link.host01.hamburg.freifunk.net.
+;7 broadcast
+
+;8 net
+9			PTR	schnacke0-link.wende1.hamburg.freifunk.net.
+10			PTR	wende1-link.schnacke0.hamburg.freifunk.net.
+;11 broadcast
+
+;12 net
+13			PTR	ffhb-link.wende1.hamburg.freifunk.net.
+14			PTR	ffhh-wende1-link.bremen.freifunk.net.
+;15 broadcast
+
+;16 net
+17			PTR	host01-link.wende1.hamburg.freifunk.net.
+18			PTR	wende1-link.host01.hamburg.freifunk.net.
+;19 broadcast
+
+;free
+
+
+;232 net
+233			PTR	host01-br.host01.hamburg.freifunk.net.
+;234
+;235
+;236
+;237
+;238
+;239 broadcast
+
+;240 net
+241			PTR	host02-br.wende1.hamburg.freifunk.net.
+242			PTR	host02-br.gw03.hamburg.freifunk.net.
+;243			PTR
+;245			PTR
+;246			PTR
+;247 broadcast
+
+;248 net
+249			PTR	host03-br.suede0.hamburg.freifunk.net.
+250			PTR	host03-br.gw01.hamburg.freifunk.net.
+;251
+;252
+;253
+;254
+;255 broadcast
