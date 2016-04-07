@@ -59,6 +59,7 @@ media			A	193.96.224.250	; srv02
 			AAAA    2a03:2267:ffff:b00::3
 1.builder		A	80.150.98.130
 			AAAA	2003:58:402c:2:250:56ff:fea7:b108
+schnacke0		A	193.96.224.48
 
 ;reverse dns for clients
 clients			NS 	srv03
