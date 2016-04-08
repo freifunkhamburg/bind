@@ -18,7 +18,7 @@ $TTL 86400	; 1 Tag
 
 ; Each BGP router has a /30 or /29 to connect other VMs on the specific host
 225			PTR	host03-br.suede0.hamburg.freifunk.net.
-: 226 free host03
+; 226 free host03
 ; 227 reserved host03
 ; 228 reserved host03
 ; 229 reserved host03
