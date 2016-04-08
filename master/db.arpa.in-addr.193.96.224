@@ -1,7 +1,7 @@
 $ORIGIN 224.96.193.in-addr.arpa.
 $TTL 86400	; 1 Tag
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.ccc.de. (
-				2016040700; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2016040800; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -16,6 +16,19 @@ $TTL 86400	; 1 Tag
 ; AUTHORATIVE NAMESERVER
 @                       NS      srv01.hamburg.freifunk.net.
 
+; Each BGP router has a /30 or /29 to connect other VMs on the specific host
+225			PTR	host03-br.suede0.hamburg.freifunk.net.
+: 226 free host03
+; 227 reserved host03
+; 228 reserved host03
+; 229 reserved host03
+; 230 reserved host03
+; 231 blocked because broadcast!
+
+
+
+; /32 Host Routes. Pick anything between .232 and .239.
+
 ; cloud.hamburg.freifunk.net
 ; to be reachable from outside
 238			PTR	cloud.hamburg.freifunk.net.
@@ -27,12 +40,21 @@ $TTL 86400	; 1 Tag
 
 ; SERVICES. For now take addresses between .240 and .255 (/28)
 ; Each BGP router has a /30 or /29 to connect other VMs on the specific host
-241			PTR	host-link.suede0.hamburg.freifunk.net.
-245			PTR	host-link.wandale0.hamburg.freifunk.net.
+
+; 241 free host01
+; 242 free host01
+; 243 free host01
+244			PTR	vpn03f.berlin.freifunk.net.
+245			PTR	host01-br.wandale0.hamburg.freifunk.net.
 246			PTR	gw02.hamburg.freifunk.net. ; fastd instance gw05
-249			PTR	host-link.wende1.hamburg.freifunk.net. ; 249/29 
+
+249			PTR	host02-br.wende1.hamburg.freifunk.net. ; 249/29 
 250			PTR	srv02.hamburg.freifunk.net.
 251			PTR	gw03.hamburg.freifunk.net. ; fastd instance gw04
+;252 free host02
+;253 free host02
+;254 free host02
+
 ; CLIENT-NAT blocks
 
 ; GW01
