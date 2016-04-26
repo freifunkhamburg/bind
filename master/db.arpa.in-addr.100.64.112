@@ -1,7 +1,7 @@
 $ORIGIN 112.64.100.in-addr.arpa.
 $TTL 86400	; 1 Tag
 @			IN SOA	srv01.ffhh. hostmaster.hamburg.ccc.de. (
-				2016040800; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2016042600; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -43,6 +43,17 @@ $TTL 86400	; 1 Tag
 ;20 net
 21			PTR	ffhb-vpn02-link.wende1.hamburg.freifunk.net.
 22			PTR	ffhh-wende1-link.bremen.freifunk.net.
+; 23 broadcast
+
+;24 net
+25			PTR	gw01-ospf.gw01.hamburg.freifunk.net.
+26			PTR	gw01-ospf.cloud.hamburg.freifunk.net.
+; 27 reserved
+; 28 reserved
+; 29 reserved
+; 30 reserved
+; 31 net
+
 ;free
 
 
