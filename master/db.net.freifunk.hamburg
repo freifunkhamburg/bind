@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Tag
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2016050601; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				2016050602; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -118,6 +118,5 @@ statistik		CNAME	ff.besaid.de.
 cloud			A	193.96.224.238
 			AAAA	2a03:2267::224:21ff:fe2e:63f9
 schnackr		CNAME   cloud
-chat			AAAA	2a03:2267::68b3:f1c9:2067:688a	; Eine rocket.chat-Installation
 list			CNAME	srv04
 lg			CNAME	srv02
