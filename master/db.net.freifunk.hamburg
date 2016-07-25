@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Tag
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2016072001; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				2016072501; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -50,8 +50,9 @@ srv01			A	212.12.51.134
 			AAAA	2a03:2267::101
 srv02			A	193.96.224.250
 			AAAA	2a03:2267:ffff:b00::3
-srv03			A	80.252.100.117
+srv05			A	80.252.100.117
 			AAAA	2a00:1f78:c:e::a
+srv03			CNAME 	srv05
 srv04			A	80.252.100.116
 srv04          	MX  	10 srv04.hamburg.freifunk.net.
 meta			CNAME   srv02
@@ -118,7 +119,7 @@ statistik		CNAME	ff.besaid.de.
 cloud			A	193.96.224.238
 			AAAA	2a03:2267::224:21ff:fe2e:63f9
 schnackr		CNAME   cloud
-list			CNAME	srv04
+list			CNAME	srv05
 lg			CNAME	srv02
 matrix          AAAA    2a03:2267::219:99ff:fedd:49c8
 _matrix._tcp    SRV 10 0 8448   matrix.hamburg.freifunk.net
