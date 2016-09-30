@@ -1,7 +1,7 @@
 $ORIGIN 224.96.193.in-addr.arpa.
 $TTL 86400	; 1 Tag
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.ccc.de. (
-				2016040801; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2016093001; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -126,3 +126,5 @@ $TTL 86400	; 1 Tag
 ;53 reserved: ZEA/non-mesh NAT
 ;54 reserved: ZEA/non-mesh NAT
 ;55 reserved: ZEA/non-mesh NAT
+
+56			PTR	temporary-nat.transition.hamburg.freifunk.net.
