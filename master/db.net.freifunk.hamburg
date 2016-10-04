@@ -20,8 +20,8 @@ $TTL 3600	; 1 Stunde
 
 
 ;MAIL
-			MX	10 srv04.hamburg.freifunk.net.
-@           IN TXT "v=spf1 mx -all"
+			MX	25 srv04.hamburg.freifunk.net.
+@           IN TXT "v=spf1 mx ?all"
 postmaster		CNAME	srv01
 mail			CNAME	srv04
 smtp			CNAME	srv04
@@ -29,9 +29,21 @@ imap			CNAME	srv04
 autodiscover    CNAME   srv04
 dav             CNAME   srv04
 
-_imap._tcp    SRV 0 0 143   mail.hamburg.freifunk.net
-_imaps._tcp    SRV 0 0 993  mail.hamburg.freifunk.net
-_smtp._tcp    SRV 5 0 587   mail.hamburg.freifunk.net
+_imap._tcp    SRV 0 0 143   mail.hamburg.freifunk.net.
+_imaps._tcp    SRV 0 0 993  mail.hamburg.freifunk.net.
+_smtp._tcp    SRV 5 0 587   mail.hamburg.freifunk.net.
+
+_autoconfig._tcp 		IN 	SRV	0 1 443 srv04.hamburg.freifunk.net.
+_autodiscover._tcp 		IN 	SRV	0 1 443 srv04.hamburg.freifunk.net.
+_carddavs._tcp 			IN 	SRV	0 1 443 srv04.hamburg.freifunk.net.
+_caldavs._tcp 			IN 	SRV	0 1 443 srv04.hamburg.freifunk.net.
+_imap._tcp 				IN 	SRV	0 1 143 srv04.hamburg.freifunk.net.
+_imaps._tcp 			IN 	SRV	0 1 993 srv04.hamburg.freifunk.net.
+_submission._tcp 		IN 	SRV	0 1 587 srv04.hamburg.freifunk.net.
+_pop3._tcp 				IN 	SRV	0 1 110 srv04.hamburg.freifunk.net.
+_pop3s._tcp 			IN 	SRV	0 1 995 srv04.hamburg.freifunk.net.
+
+default._domainkey   	IN      TXT     ( "v=DKIM1;k=rsa;t=s;s=email;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz9QRo6J/kwD7zhpFywY6PlXOCp7iZ5IGoSlBxm3//gCQAlWoZ5xh8sWW1OJXHi+sg+y68dmK/5vou32Dpg/yNOwfIJ9vK8tt2rzxQusXc7YUIBkatGYn+/5Xh98sagrtKSbccJ0aOROrX/euBNKuiBTfrOzrFz78slDp8vbYpAehgY3EJP4iS09FCo2+Pn22MIMQx1VvKoQhvreWtosuZSTvk17m6WJ95Qn0ZzRpCZPbu0xABNnSlfbqEJ6LbROKyBkG68+qiqe9M+yGlJd9AYUpkv9M2f3Sf9qyGYhvHgV1spMzbdPZrZGOEN7/UCtQEcSMZMOqcwOJJ1Q8NycIuQIDAQAB" )
 
 ;GATEWAYS
 gw01			A       80.252.100.115
