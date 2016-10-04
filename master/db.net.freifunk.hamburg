@@ -31,7 +31,7 @@ dav             CNAME   srv04
 
 _imap._tcp    SRV 0 0 143   mail.hamburg.freifunk.net.
 _imaps._tcp    SRV 0 0 993  mail.hamburg.freifunk.net.
-_smtp._tcp    SRV 5 0 587   mail.hamburg.freifunk.net.
+_smtp._tcp    SRV 5 0 25   mail.hamburg.freifunk.net.
 
 _autoconfig._tcp 		IN 	SRV	0 1 443 srv04.hamburg.freifunk.net.
 _autodiscover._tcp 		IN 	SRV	0 1 443 srv04.hamburg.freifunk.net.
