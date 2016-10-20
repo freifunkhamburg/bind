@@ -35,6 +35,7 @@ $TTL 86400	; 1 Tag
 1.0			PTR	knoten.ffhh.
 
 ; LOKALE DIENSTE DER FREIFUNKER_INNEN
+0.14			PTR	venezia.herbrich.ffhh.
 7.0			PTR	somakapsel.ffhh.
 12.0			PTR	igelcam.ffhh.
 13.0			PTR	brachvogel.ffhh.
