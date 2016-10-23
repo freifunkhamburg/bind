@@ -1,7 +1,7 @@
 $ORIGIN 224.96.193.in-addr.arpa.
 $TTL 86400	; 1 Tag
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.ccc.de. (
-				2016100101; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2016102301; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -43,6 +43,7 @@ $TTL 86400	; 1 Tag
 
 ; 241 free host01
 ; 242 free host01
+242			PTR 60	ffhl-vm.host01.hamburg.freifunk.net.
 243			PTR	nat-243-vpn03f.berlin.freifunk.net.
 244			PTR	vpn03f.berlin.freifunk.net.
 245			PTR	host01-br.wandale0.hamburg.freifunk.net.
@@ -110,8 +111,11 @@ $TTL 86400	; 1 Tag
 ; bremen.freifunk.net
 40			PTR	nat-40-vpn01.bremen.freifunk.net.
 41			PTR	nat-41-vpn02.bremen.freifunk.net.
-;42 reserved: other community
-;43 reserved: other community
+
+; Luebeck, temporary
+42			PTR 60	nat-42-ffhl-gw.hamburg.freifunk.net.
+43			PTR 60	nat-43-ffhl-gw.hamburg.freifunk.net.
+
 ;44 reserved: other community
 ;45 reserved: other community
 ;46 reserved: other community
