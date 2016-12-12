@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Stunde
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2016100100; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				2016121200; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -132,3 +132,4 @@ _matrix._tcp.matrix     SRV 10 0 8448   matrix.hamburg.freifunk.net.
 ; Target for XMPP SRV records, no CNAMEs
 xmpp			A	193.96.224.250
 			AAAA	2a03:2267:ffff:b00::3
+dev			CNAME	srv02
