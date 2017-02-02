@@ -1,7 +1,7 @@
 $ORIGIN 7.6.2.2.3.0.a.2.ip6.arpa.
 $TTL 86400	; 1 Tag
 @				IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2016102301; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2017020201; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -65,6 +65,8 @@ $ORIGIN f.f.f.f.7.6.2.2.3.0.a.2.ip6.arpa.
 2.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.3.0.b.0		PTR	wende1-link.schnacke0.hamburg.freifunk.net.
 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.4.0.b.0		PTR	suede0-link.wende1.hamburg.freifunk.net.
 2.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.4.0.b.0		PTR	wende1-link.suede0.hamburg.freifunk.net.
+1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.0.b.0		PTR	fux-link.wende1.hamburg.freifunk.net.
+2.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.0.b.0		PTR	cr01.fux-eg.net.
 
 ; 2a03:2267:ffff:0c00::/56 Tunnel suede0
 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.c.0		PTR	host-link.suede0.hamburg.freifunk.net.
