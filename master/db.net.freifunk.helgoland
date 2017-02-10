@@ -1,7 +1,7 @@
 $ORIGIN helgoland.freifunk.net.
 $TTL 3600	; 1 Tag
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2017012600; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				2017021000; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -30,10 +30,7 @@ srv01		A	78.46.121.104
 
 ;SERVICES
 
-updates		A	212.12.51.134	; srv01.ffhh, dns load balancing
-		AAAA	2a03:2267::101
-updates		A	193.96.224.250	; srv02.ffhh, dns load balancing
-		AAAA    2a03:2267:ffff:b00::3
+updates		CNAME	srv01
 formular	CNAME	srv01
 karte		CNAME	srv01
 meta		CNAME 	srv01
