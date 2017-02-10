@@ -22,8 +22,7 @@ gw02			A	10.189.1.2
 ; DIENSTE
 ; INFRASTRUKTURDIENSTE
 ; Updates - Dienste fuer Knoten duerfen nur IPv6 sein!
-1.updates.services	AAAA	2a03:2267::101	;srv01
-2.updates.services	AAAA	2a03:2267::102	;srv02
+1.updates.services	AAAA	2a03:2267:4e16:1ad::102	;srv01
 
 ; NTP
 1.ntp.services          AAAA    2a03:2267::101	;ffhh srv01
