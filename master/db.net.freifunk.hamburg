@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Stunde
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2017021800; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				2017022600; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -20,12 +20,36 @@ $TTL 3600	; 1 Stunde
 
 
 ;MAIL
-			MX	10 srv01.hamburg.freifunk.net.
+			MX	25 srv04.hamburg.freifunk.net.
+@           IN TXT "v=spf1 mx ?all"
 postmaster		CNAME	srv01
-mail			CNAME	srv01
-smtp			CNAME	srv01
-imap			CNAME	srv01
+mail			CNAME	srv04
+smtp			CNAME	srv04
+imap			CNAME	srv04
+autodiscover    CNAME   srv04
+dav             CNAME   srv04
 
+_imap._tcp    SRV 0 0 143   mail.hamburg.freifunk.net.
+_imaps._tcp    SRV 0 0 993  mail.hamburg.freifunk.net.
+_smtp._tcp    SRV 5 0 25   mail.hamburg.freifunk.net.
+
+_autoconfig._tcp 		IN 	SRV	0 1 443 srv04.hamburg.freifunk.net.
+_autodiscover._tcp 		IN 	SRV	0 1 443 srv04.hamburg.freifunk.net.
+_carddavs._tcp 			IN 	SRV	0 1 443 srv04.hamburg.freifunk.net.
+_caldavs._tcp 			IN 	SRV	0 1 443 srv04.hamburg.freifunk.net.
+_imap._tcp 				IN 	SRV	0 1 143 srv04.hamburg.freifunk.net.
+_imaps._tcp 			IN 	SRV	0 1 993 srv04.hamburg.freifunk.net.
+_submission._tcp 		IN 	SRV	0 1 587 srv04.hamburg.freifunk.net.
+_pop3._tcp 				IN 	SRV	0 1 110 srv04.hamburg.freifunk.net.
+_pop3s._tcp 			IN 	SRV	0 1 995 srv04.hamburg.freifunk.net.
+
+_domainkey.hamburg.freifunk.net.        IN      TXT     o=!;r=postmaster@domain.com;t=y
+default._domainkey.hamburg.freifunk.net.  IN      TXT    ("v=DKIM1;k=rsa;t=s;s=email;"
+"p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz9QRo6J/kwD7zhpFywY6PlXOCp7iZ5IGoSlBxm3//gC"
+"QAlWoZ5xh8sWW1OJXHi+sg+y68dmK/5vou32Dpg/yNOwfIJ9vK8tt2rzxQusXc7YUIBkatGYn+/5Xh98sagrtKSbc"
+"cJ0aOROrX/euBNKuiBTfrOzrFz78slDp8vbYpAehgY3EJP4iS09FCo2+Pn22MIMQx1VvKoQhvreWtosuZSTvk17m6"
+"WJ95Qn0ZzRpCZPbu0xABNnSlfbqEJ6LbROKyBkG68+qiqe9M+yGlJd9AYUpkv9M2f3Sf9qyGYhvHgV1spMzbdPZrZ"
+"GOEN7/UCtQEcSMZMOqcwOJJ1Q8NycIuQIDAQAB;")
 
 ;GATEWAYS
 gw01			A       80.252.100.115
