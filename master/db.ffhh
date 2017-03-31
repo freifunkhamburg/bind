@@ -52,9 +52,6 @@ gw08			A       10.112.1.8
 formular.services	CNAME	srv02
 formular		CNAME	formular.services
 
-; git
-git.services    	CNAME	srv01
-
 ; opkg reverse proxy
 opkg.services		AAAA    2a03:2267::102  ;srv02
 lede.opkg.services	AAAA    2a03:2267::102  ;srv02
@@ -62,7 +59,6 @@ lede.opkg.services	AAAA    2a03:2267::102  ;srv02
 ; andere administrative Dienste
 media.services		A	10.112.1.2		;srv02
 			AAAA    2a03:2267::102
-postmaster.services	CNAME	srv01	; Seite des Mailservers
 statistik.services	CNAME	ff.besaid.de.
 
 ; WEITERE DIENSTE
