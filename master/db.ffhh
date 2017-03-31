@@ -1,6 +1,6 @@
 $ORIGIN ffhh.
 $TTL 86400	; 1 Tag
-@			IN SOA	srv01.ffhh. hostmaster.hamburg.freifunk.net. (
+@			IN SOA	srv02.ffhh. hostmaster.hamburg.freifunk.net. (
 				2017021800; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
@@ -10,7 +10,7 @@ $TTL 86400	; 1 Tag
 
 
 ;AUTHORATIVE NAMESERVER
-@			NS	srv01.ffhh.
+@			NS	srv02.ffhh.
 ;@			NS	gw01.ffhh.
 
 
