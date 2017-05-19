@@ -1,7 +1,7 @@
 $ORIGIN helgo.
 $TTL 86400	; 1 Tag
 @			IN SOA	srv02.ffhh. hostmaster.hamburg.freifunk.net. (
-				20170428000; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2017051900; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -29,7 +29,8 @@ gw02			A	10.189.1.2
 2.ntp.services          AAAA	2a03:2267::102	;ffhh srv02
 
 ; opkg reverse proxy
-opkg.services		AAAA    2a03:2267::101  ;ffhh srv01
+opkg.services		AAAA    2a03:2267::102  ;ffhh srv02
+lede.opkg.services	AAAA	2a03:2267::102	;ffhh srv02
 
 ; AKTUELL VERBUNDENER KNOTEN
 knoten			A	10.189.0.1
