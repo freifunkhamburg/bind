@@ -1,3 +1,4 @@
+; Achtung: ffnord.net wird anderswo verwaltet!
 $ORIGIN ffnord.net.
 $TTL 3600	; 1 Stunde
 @			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
@@ -8,7 +9,7 @@ $TTL 3600	; 1 Stunde
 				172800	; TTL fuer negatives caching: Analog zum Standard-Caching wird im Cache vermerkt, dass dem zuständigen Nameserver der Name unbekannt war. Da für einen nicht vorhandenen Namen keine TTL existiert, steht sie hier.
 				)
 
-;AUTHORATIVE NAMESERVERS				
+;AUTHORATIVE NAMESERVERS
 @			NS	srv01.hamburg.freifunk.net.
 @			NS	named.exosphere.de.
 @			NS	ns.ohrensessel.net.
@@ -31,7 +32,7 @@ mesh	CNAME	www
 con	CNAME	srv01.hamburg.freifunk.net.
 
 i	NS	ins.ffnord.net.
-ins	A	144.76.72.235	
+ins	A	144.76.72.235
 
 ; Jabber (CNAMEs for web registration and Let's Encrypt)
 conference 			CNAME xmpp.hamburg.freifunk.net.
