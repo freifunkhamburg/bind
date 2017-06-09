@@ -1,14 +1,14 @@
 $TTL 600  ; 10 minutes
-@     IN SOA  srv01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-          1456510837 ; serial
+@     IN SOA  srv02.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
+          1456510838 ; serial
           600        ; refresh (10min)
           30         ; retry (30s)
           3600       ; expire (1 hour)
           60         ; minimum (1 minute)
           )
-          NS srv01.hamburg.freifunk.net.
+          NS srv02.hamburg.freifunk.net.
           NS ns.ohrensessel.net.
-      
+
 outdoor-plus	AAAA	2a03:2267::618:d6ff:fea8:9f6f
 freifunk-lightbridge	AAAA	2a03:2267::ea94:f6ff:fe29:d992
 muttiverse	AAAA	2a03:2267::ea94:f6ff:fe2a:9280
