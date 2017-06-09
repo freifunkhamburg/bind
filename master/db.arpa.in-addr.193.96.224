@@ -1,7 +1,7 @@
 $ORIGIN 224.96.193.in-addr.arpa.
 $TTL 86400	; 1 Tag
-@			IN SOA	srv01.hamburg.freifunk.net. hostmaster.hamburg.ccc.de. (
-				2017010201; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+@			IN SOA	srv02.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
+				2017052600; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -14,7 +14,7 @@ $TTL 86400	; 1 Tag
 
 
 ; AUTHORATIVE NAMESERVER
-@                       NS      srv01.hamburg.freifunk.net.
+@                       NS      srv02.hamburg.freifunk.net.
 
 ; /30 transport links
 
@@ -57,7 +57,7 @@ $TTL 86400	; 1 Tag
 245			PTR	host01-br.wandale0.hamburg.freifunk.net.
 246			PTR	gw02.hamburg.freifunk.net. ; fastd instance gw05
 
-249			PTR	host02-br.wende1.hamburg.freifunk.net. ; 249/29 
+249			PTR	host02-br.wende1.hamburg.freifunk.net. ; 249/29
 250			PTR	srv02.hamburg.freifunk.net.
 251			PTR	gw03.hamburg.freifunk.net. ; fastd instance gw04
 ;252 free host02
