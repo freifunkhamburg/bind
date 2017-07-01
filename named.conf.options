@@ -25,4 +25,9 @@ options {
 	include "/etc/bind/named.conf.options.local";
 #	edns-udp-size 512;
 #	max-udp-size 512;
+	allow-query-cache {
+		127.0.0.1; ::1; # localhost{,6}
+		# private addr space used in Freifunk, DN42 and Hackint
+		10.0.0.0/8; fc00::/7; 172.16.0.0/12; fd51:2bb2:fd0d::/64; 2a03:2267::/32; fe80::/10; 2001:0bf7::/32; 2a03:2260::/29; 2001:67c:2d50::/48;
+	};
 };
