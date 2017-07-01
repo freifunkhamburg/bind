@@ -13,3 +13,6 @@ db*
 !/master
 !/master/*
 !.gitignore
+
+# Ausnahme von der Ausnahme
+/master/db.net.freifunk.hamburg.nodes
