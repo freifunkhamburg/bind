@@ -7,6 +7,7 @@ db*
 /slave/ffa.zone
 /zones.rfc1918
 /icvpn.conf
+/named.conf.options.local
 
 #ausser...
 !named.conf
