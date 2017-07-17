@@ -142,7 +142,7 @@ updates			A	80.252.100.117	; srv03, dns load balancing
 			AAAA	2a00:1f78:c:e::a
 updates			A	193.96.224.250	; srv02, dns load balancing
 			AAAA    2a03:2267:ffff:b00::3
-updatez			CNAME	srv02
+updatez			CNAME	srv02 ; Test fuer Domainsplit
 smokeping		CNAME	hh01s01.unbedenklich.net.
 statistik		CNAME	ff.besaid.de.
 cloud			A	193.96.224.238
