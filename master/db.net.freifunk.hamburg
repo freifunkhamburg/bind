@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Stunde
 @			IN SOA	srv02.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2017090900; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				2017100300 ; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -74,15 +74,15 @@ gw02-new		A	193.96.224.241
 
 ;INFRASTRUCTURE
 srv01			A	212.12.51.134
-			AAAA	2a03:2267::101
+			AAAA	2a00:14b0:4200:3380:134::1
 srv02			A	193.96.224.250
 			AAAA	2a03:2267:ffff:b00::3
 srv03			A	80.252.100.117
 			AAAA	2a00:1f78:c:e::a
-            MX      10 srv03.hamburg.freifunk.net.
+			MX      10 srv03.hamburg.freifunk.net.
 srv04			A	80.252.100.116
 			AAAA	2a00:1f78:c:e::b
-srv04          	MX  	10 srv04.hamburg.freifunk.net.
+			MX  	10 srv04.hamburg.freifunk.net.
 meta			CNAME   srv02
 media			A	193.96.224.250	; srv02
 			AAAA    2a03:2267:ffff:b00::3
@@ -138,11 +138,10 @@ git                     CNAME   srv02
 support			CNAME   srv02
 ;kontakt		CNAME	ticket.ffhh.pixelkeeper.de.
 ;ldap			CNAME   srv02
+updates			A	212.12.51.134	; srv01, dns load balancing
+			AAAA	2a00:14b0:4200:3380:134::1
 updates			A	80.252.100.117	; srv03, dns load balancing
 			AAAA	2a00:1f78:c:e::a
-updates			A	193.96.224.250	; srv02, dns load balancing
-			AAAA    2a03:2267:ffff:b00::3
-updatez			CNAME	srv02 ; Test fuer Domainsplit
 smokeping		CNAME	hh01s01.unbedenklich.net.
 statistik		CNAME	ff.besaid.de.
 cloud			A	193.96.224.238
