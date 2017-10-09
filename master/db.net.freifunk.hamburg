@@ -88,6 +88,7 @@ media			A	193.96.224.250	; srv02
 			AAAA    2a03:2267:ffff:b00::3
 1.builder		A	80.150.98.130
 			AAAA	2003:58:402c:2:250:56ff:fea7:b108
+builder2	AAAA	2a01:4f8:210:40d1::ff01
 schnacke0		A	193.96.224.48
 			AAAA	2a03:2267::20d:b9ff:fe3f:7bf6
 
