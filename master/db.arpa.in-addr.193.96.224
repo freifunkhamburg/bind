@@ -1,7 +1,7 @@
 $ORIGIN 224.96.193.in-addr.arpa.
 $TTL 86400	; 1 Tag
 @			IN SOA	srv02.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2017052600; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2017110100; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -147,3 +147,11 @@ $TTL 86400	; 1 Tag
 61			PTR	nat-61-gw03-new.hamburg.freifunk.net.
 62			PTR	nat-62-gw03-new.hamburg.freifunk.net.
 63			PTR	nat-63-gw03-new.hamburg.freifunk.net.
+64			PTR	nat-56-gw02-new.hamburg.freifunk.net.
+65			PTR	nat-57-gw02-new.hamburg.freifunk.net.
+66			PTR	nat-58-gw02-new.hamburg.freifunk.net.
+67			PTR	nat-59-gw02-new.hamburg.freifunk.net.
+68			PTR	nat-60-gw02-new.hamburg.freifunk.net.
+69			PTR	nat-61-gw02-new.hamburg.freifunk.net.
+70			PTR	nat-62-gw02-new.hamburg.freifunk.net.
+71			PTR	nat-63-gw02-new.hamburg.freifunk.net.
