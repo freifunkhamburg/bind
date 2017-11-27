@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Stunde
 @			IN SOA	srv02.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2017112700 ; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				2017112701 ; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -166,4 +166,4 @@ xmpp			A	193.96.224.250
 			AAAA	2a03:2267:ffff:b00::3
 dev			CNAME	srv02
 media-mirror		A	193.96.224.226
-			AAAAA	2a03:2267:ffff:c00::c
+			AAAA	2a03:2267:ffff:c00::c
