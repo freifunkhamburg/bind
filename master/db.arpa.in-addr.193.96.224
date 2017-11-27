@@ -1,7 +1,7 @@
 $ORIGIN 224.96.193.in-addr.arpa.
 $TTL 86400	; 1 Tag
 @			IN SOA	srv02.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2017110100; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2017112700; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -26,7 +26,7 @@ $TTL 86400	; 1 Tag
 
 ; Each BGP router has a /30 or /29 to connect other VMs on the specific host
 225			PTR	host03-br.suede0.hamburg.freifunk.net.
-; 226 free host03
+226			PTR	media-mirror.hamburg.freifunk.net.
 ; 227 reserved host03
 ; 228 reserved host03
 ; 229 reserved host03
