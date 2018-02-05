@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Stunde
 @			IN SOA	srv02.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2017120400 ; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				2018020500 ; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -53,15 +53,11 @@ default._domainkey.hamburg.freifunk.net.  IN      TXT    ("v=DKIM1;k=rsa;t=s;s=e
 ;GATEWAYS
 gw01			A       80.252.100.115
                         AAAA    2a00:1f78:c:e::f
-gw02                    A       213.238.45.66
-                        AAAA    2a00:ea8:100:8::4
 gw03			A	213.128.138.161
 			AAAA    2001:868:100:d00::20
 gw06			CNAME 	gw01
 gw04			A	193.96.224.251
 			AAAA    2a03:2267:ffff:b00::4
-gw05			A	193.96.224.246
-			AAAA	2a03:2267:ffff:a00::3
 gw01-new		A	193.96.224.227
 			AAAA	2a03:2267:ffff:c00::1000
 gw02-new		A	193.96.224.241
@@ -74,6 +70,7 @@ gw05-new		A	193.96.224.241
 			AAAA	2a03:2267:ffff:a00::2000
 gw06-new		A	193.96.224.254
 			AAAA	2a03:2267:ffff:b00::3000
+gw02-supernew		A	193.96.224.246
 
 ; ICVPN
 01.icvpn                CNAME   gw01
