@@ -22,29 +22,29 @@ $TTL 3600	; 1 Stunde
 			MX	25 mail.hamburg.freifunk.net.
 @			TXT	"v=spf1 mx ?all"
 ; MX must not be a CNAME
-mail           A   80.252.100.116
-            AAAA    2a00:1f78:c:e::b
+mail			A	80.252.100.116
+			AAAA	2a00:1f78:c:e::b
 smtp			CNAME	srv04
 imap			CNAME	srv04
 autodiscover		CNAME	srv04
 dav			CNAME	srv04
 
-_imap._tcp    SRV 0 0 143   srv04.hamburg.freifunk.net.
-_imaps._tcp    SRV 0 0 993  srv04.hamburg.freifunk.net.
-_smtp._tcp    SRV 5 0 25   srv04.hamburg.freifunk.net.
+_imap._tcp		SRV	0 0 143 srv04.hamburg.freifunk.net.
+_imaps._tcp		SRV	0 0 993 srv04.hamburg.freifunk.net.
+_smtp._tcp		SRV	5 0 25 srv04.hamburg.freifunk.net.
 
-_autoconfig._tcp 		IN 	SRV	0 1 443 srv04.hamburg.freifunk.net.
-_autodiscover._tcp 		IN 	SRV	0 1 443 srv04.hamburg.freifunk.net.
-_carddavs._tcp 			IN 	SRV	0 1 443 srv04.hamburg.freifunk.net.
-_caldavs._tcp 			IN 	SRV	0 1 443 srv04.hamburg.freifunk.net.
-_imap._tcp 				IN 	SRV	0 1 143 srv04.hamburg.freifunk.net.
-_imaps._tcp 			IN 	SRV	0 1 993 srv04.hamburg.freifunk.net.
-_submission._tcp 		IN 	SRV	0 1 587 srv04.hamburg.freifunk.net.
-_pop3._tcp 				IN 	SRV	0 1 110 srv04.hamburg.freifunk.net.
-_pop3s._tcp 			IN 	SRV	0 1 995 srv04.hamburg.freifunk.net.
+_autoconfig._tcp	SRV	0 1 443 srv04.hamburg.freifunk.net.
+_autodiscover._tcp	SRV	0 1 443 srv04.hamburg.freifunk.net.
+_carddavs._tcp		SRV	0 1 443 srv04.hamburg.freifunk.net.
+_caldavs._tcp		SRV	0 1 443 srv04.hamburg.freifunk.net.
+_imap._tcp		SRV	0 1 143 srv04.hamburg.freifunk.net.
+_imaps._tcp		SRV	0 1 993 srv04.hamburg.freifunk.net.
+_submission._tcp	SRV	0 1 587 srv04.hamburg.freifunk.net.
+_pop3._tcp		SRV	0 1 110 srv04.hamburg.freifunk.net.
+_pop3s._tcp		SRV	0 1 995 srv04.hamburg.freifunk.net.
 
-_domainkey.hamburg.freifunk.net.        IN      TXT     o=!;r=postmaster@domain.com;t=y
-default._domainkey.hamburg.freifunk.net.  IN      TXT    ("v=DKIM1;k=rsa;t=s;s=email;"
+_domainkey.hamburg.freifunk.net.		TXT	o=!;r=postmaster@domain.com;t=y
+default._domainkey.hamburg.freifunk.net.	TXT	("v=DKIM1;k=rsa;t=s;s=email;"
 "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz9QRo6J/kwD7zhpFywY6PlXOCp7iZ5IGoSlBxm3//gC"
 "QAlWoZ5xh8sWW1OJXHi+sg+y68dmK/5vou32Dpg/yNOwfIJ9vK8tt2rzxQusXc7YUIBkatGYn+/5Xh98sagrtKSbc"
 "cJ0aOROrX/euBNKuiBTfrOzrFz78slDp8vbYpAehgY3EJP4iS09FCo2+Pn22MIMQx1VvKoQhvreWtosuZSTvk17m6"
@@ -52,13 +52,13 @@ default._domainkey.hamburg.freifunk.net.  IN      TXT    ("v=DKIM1;k=rsa;t=s;s=e
 "GOEN7/UCtQEcSMZMOqcwOJJ1Q8NycIuQIDAQAB;")
 
 ;GATEWAYS
-gw01			A       80.252.100.115
-                        AAAA    2a00:1f78:c:e::f
+gw01			A	80.252.100.115
+			AAAA	2a00:1f78:c:e::f
 gw03			A	213.128.138.161
-			AAAA    2001:868:100:d00::20
-gw06			CNAME 	gw01
+			AAAA	2001:868:100:d00::20
+gw06			CNAME	gw01
 gw04			A	193.96.224.251
-			AAAA    2a03:2267:ffff:b00::4
+			AAAA	2a03:2267:ffff:b00::4
 gw01-new		A	193.96.224.227
 			AAAA	2a03:2267:ffff:c00::1000
 gw02-new		A	193.96.224.241
@@ -74,8 +74,8 @@ gw06-new		A	193.96.224.254
 gw02-supernew		A	193.96.224.246
 
 ; ICVPN
-01.icvpn                CNAME   gw01
-02.icvpn 		CNAME	gw02
+01.icvpn		CNAME	gw01
+02.icvpn		CNAME	gw02
 03.icvpn		CNAME	gw03
 
 ;INFRASTRUCTURE
@@ -85,35 +85,35 @@ srv02			A	193.96.224.250
 			AAAA	2a03:2267:ffff:b00::3
 srv03			A	80.252.100.117
 			AAAA	2a00:1f78:c:e::a
-			MX      10 srv03.hamburg.freifunk.net.
+			MX	10 srv03.hamburg.freifunk.net.
 srv04			A	80.252.100.116
 			AAAA	2a00:1f78:c:e::b
-			MX  	10 srv04.hamburg.freifunk.net.
-meta			CNAME   srv02
-media			A	193.96.224.250	; srv02
-			AAAA    2a03:2267:ffff:b00::3
+			MX	10 srv04.hamburg.freifunk.net.
+meta			CNAME	srv02
+media			A	193.96.224.250		; srv02
+			AAAA	2a03:2267:ffff:b00::3
 builder1		A	80.150.98.130
-1.builder	CNAME 	builder1
-builder2	AAAA	2a01:4f8:210:40d1::ff01
+1.builder		CNAME	builder1
+builder2		AAAA	2a01:4f8:210:40d1::ff01
 schnacke0		A	193.96.224.48
 			AAAA	2a03:2267::20d:b9ff:fe3f:7bf6
 
 ;Iodine
 i			NS	ins.hamburg.freifunk.net.
-ins			A       80.252.100.115		;gw01
-                        AAAA    2a00:1f78:c:e::f	;gw01
+ins			A	80.252.100.115		; gw01
+			AAAA	2a00:1f78:c:e::f	; gw01
 
 ;reverse dns for clients
-clients			NS 	srv03
+clients			NS	srv03
 
 ;dns for nodes
-nodes           NS  srv02
-nodes           NS  ns.ohrensessel.net.
+nodes			NS	srv02
+nodes			NS	ns.ohrensessel.net.
 
 ;physical hosts
 host01			AAAA	2a00:ea8:100:8::3	; n@work
 			A	212.12.38.182
-host02			AAAA    2001:868:100:d00::1000	; IPHH
+host02			AAAA	2001:868:100:d00::1000	; IPHH
 host03			AAAA	2a00:1f78:c:e::d	; artfiles
 host04			CNAME	host01
 
@@ -140,8 +140,8 @@ www			CNAME	srv02
 formular		CNAME	srv02
 map			CNAME	srv02
 news			CNAME	srv02
-git                     CNAME   srv02
-support			CNAME   srv02
+git			CNAME	srv02
+support			CNAME	srv02
 updates			A	212.12.51.134	; srv01, dns load balancing
 			AAAA	2a00:14b0:4200:3380:134::1
 updates			A	80.252.100.117	; srv03, dns load balancing
@@ -151,7 +151,7 @@ statistik		CNAME	ff.besaid.de.
 statistik-backend	AAAA	2a01:4f8:210:40d1::ff02
 cloud			A	193.96.224.238
 			AAAA	2a03:2267:2:0:224:21ff:fe2e:63f9
-schnackr		CNAME   cloud
+schnackr		CNAME	cloud
 paste			CNAME	cloud
 list			CNAME	srv03
 lg			CNAME	srv02
@@ -160,8 +160,8 @@ tuwat			CNAME	srv01
 podcast			CNAME	srv02
 matrix			AAAA	2a03:2267::219:99ff:fedd:49c8
 			A	193.96.224.237
-_matrix._tcp            SRV 10 0 8448   matrix.hamburg.freifunk.net.
-_matrix._tcp.matrix     SRV 10 0 8448   matrix.hamburg.freifunk.net.
+_matrix._tcp		SRV	10 0 8448 matrix.hamburg.freifunk.net.
+_matrix._tcp.matrix	SRV	10 0 8448 matrix.hamburg.freifunk.net.
 ; Target for XMPP SRV records, no CNAMEs
 xmpp			A	193.96.224.250
 			AAAA	2a03:2267:ffff:b00::3
