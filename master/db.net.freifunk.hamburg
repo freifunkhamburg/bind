@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Stunde
 @	IN	SOA	srv02.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-		2018102600; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+		2018102601; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 		86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 		7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 		3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -153,7 +153,7 @@ xmpp			A	193.96.224.250
 dev			CNAME	srv02
 formular		CNAME	srv02
 git			CNAME	srv02
-hopglass		CNAME	srv02
+hopglass		CNAME	srv01
 hopglass-backend	CNAME	gw03-new
 kanban			CNAME	srv01
 lg			CNAME	srv02
