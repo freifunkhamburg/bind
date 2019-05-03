@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Stunde
 @	IN	SOA	srv02.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-		2019041200; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+		2019042600; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 		86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 		7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 		3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -90,7 +90,7 @@ srv04			A	80.252.100.116
 			AAAA	2a00:1f78:c:e::b
 			MX	10 srv04.hamburg.freifunk.net.
 mail2			A	193.96.224.229
-			AAAA	2a03:2267:ffff:c00::d
+			AAAA	2a03:2267:ffff:c00::e
 			MX	10 mail2.hamburg.freifunk.net.
 meta			CNAME	srv02
 media			A	193.96.224.250		; srv02
