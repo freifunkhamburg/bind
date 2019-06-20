@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Stunde
 @	IN	SOA	srv02.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-		2019062100; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+		2019062101; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 		1800	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 		7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 		3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -50,8 +50,12 @@ default._domainkey.hamburg.freifunk.net.	TXT	("v=DKIM1;k=rsa;t=s;s=email;"
 "cJ0aOROrX/euBNKuiBTfrOzrFz78slDp8vbYpAehgY3EJP4iS09FCo2+Pn22MIMQx1VvKoQhvreWtosuZSTvk17m6"
 "WJ95Qn0ZzRpCZPbu0xABNnSlfbqEJ6LbROKyBkG68+qiqe9M+yGlJd9AYUpkv9M2f3Sf9qyGYhvHgV1spMzbdPZrZ"
 "GOEN7/UCtQEcSMZMOqcwOJJ1Q8NycIuQIDAQAB;")
-dkim._domainkey	TXT	( "v=DKIM1; k=rsa; "
-        "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvxSDDh7d7Y6qoYIkfYUtHoNFxok3mXm3NZsWFMSeTo+/837O7prEitggNSVPEd4nx6t/NuutThzui7dPQKcP4LtFZihEwRb/JbFxpaF/znyPwH0CP54KFlFFRfdbK9jOR0y8RBEFbHoBx9Y3TYNmwlWiFtxe8WCog2/hJ0RE1cl24kJCBjTbPXFMx3zrbjEQpzPEPBqIP9BlPhjNwkDzZIRtIaGjVTqa+J/bJ/JvBrRxDnFuv46SOLWIu1AnKRLrbqLZgw/1DmGyc/GDsCWY0qlSFDFLYxOVaLQTv8Fnobj57b1FhmPn0I0l9FjqeD12TTeoUCr/4UbRWjZ9P8XQewIDAQAB"
+dkim._domainkey.hamburg.freifunk.net.		TXT	( "v=DKIM1;k=rsa;"
+"p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvxSDDh7d7Y6qoYIkfYUtHoNFxok3mXm3NZsWFMSeTo+"
+"/837O7prEitggNSVPEd4nx6t/NuutThzui7dPQKcP4LtFZihEwRb/JbFxpaF/znyPwH0CP54KFlFFRfdbK9jOR0y8"
+"RBEFbHoBx9Y3TYNmwlWiFtxe8WCog2/hJ0RE1cl24kJCBjTbPXFMx3zrbjEQpzPEPBqIP9BlPhjNwkDzZIRtIaGjV"
+"Tqa+J/bJ/JvBrRxDnFuv46SOLWIu1AnKRLrbqLZgw/1DmGyc/GDsCWY0qlSFDFLYxOVaLQTv8Fnobj57b1FhmPn0I"
+"0l9FjqeD12TTeoUCr/4UbRWjZ9P8XQewIDAQAB"
 ) ;
 
 ; GATEWAYS
