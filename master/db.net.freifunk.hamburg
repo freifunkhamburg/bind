@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Stunde
 @	IN	SOA	srv02.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-		2019062103; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+		2019062104; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 		1800	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 		7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 		3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -35,7 +35,7 @@ _submission._tcp	SRV	0 1 587 mail2.hamburg.freifunk.net.
 _pop3._tcp		SRV	0 1 110 mail2.hamburg.freifunk.net.
 _pop3s._tcp		SRV	0 1 995 mail2.hamburg.freifunk.net.
 
-_domainkey.hamburg.freifunk.net.		TXT	o=~;r=postmaster@hamburg.freifunk.net;t=y
+_domainkey.hamburg.freifunk.net.		TXT	"o=~;r=postmaster@hamburg.freifunk.net;t=y"
 default._domainkey.hamburg.freifunk.net.	TXT	("v=DKIM1;k=rsa;t=s;s=email;"
 "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz9QRo6J/kwD7zhpFywY6PlXOCp7iZ5IGoSlBxm3//gC"
 "QAlWoZ5xh8sWW1OJXHi+sg+y68dmK/5vou32Dpg/yNOwfIJ9vK8tt2rzxQusXc7YUIBkatGYn+/5Xh98sagrtKSbc"
