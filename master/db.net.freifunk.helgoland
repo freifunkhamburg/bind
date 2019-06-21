@@ -10,7 +10,6 @@ $TTL 3600	; 1 Tag
 
 ;AUTHORATIVE NAMESERVERS
 @			NS	srv02.hamburg.freifunk.net.
-;@			NS	named.exosphere.de.
 @			NS	named.ohrensessel.net.
 
 

@@ -10,9 +10,7 @@ $TTL 3600	; 1 Stunde
 
 ; AUTHORATIVE NAMESERVERS
 @			NS	srv02.hamburg.freifunk.net.
-;@			NS	named.exosphere.de.
 @			NS	named.ohrensessel.net.
-
 
 ; IP OF hamburg.freifunk.net
 @			A	193.96.224.250
