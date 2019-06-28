@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Stunde
 @	IN	SOA	srv02.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-		2019062105; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+		2019062800; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 		1800	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 		7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 		3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -75,6 +75,8 @@ gw02-supernew		A	193.96.224.246
 03.icvpn		CNAME	gw03
 
 ; INFRASTRUCTURE
+dns01			A	212.12.51.134
+			AAAA	2a00:14b0:4200:3380:134::1
 srv01			A	212.12.51.134
 			AAAA	2a00:14b0:4200:3380:134::1
 srv02			A	193.96.224.250
@@ -88,7 +90,7 @@ srv04			A	80.252.100.116
 mail2			A	193.96.224.229
 			AAAA	2a03:2267:ffff:c00::e
 			MX	10 mail2.hamburg.freifunk.net.
-pfa.mail2	CNAME mail2
+pfa.mail2		CNAME 	mail2
 meta			CNAME	srv02
 media			A	193.96.224.250		; srv02
 			AAAA	2a03:2267:ffff:b00::3
