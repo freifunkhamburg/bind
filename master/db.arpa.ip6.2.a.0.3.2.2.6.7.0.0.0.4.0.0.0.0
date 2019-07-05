@@ -1,7 +1,7 @@
 $ORIGIN 0.0.0.0.4.0.0.0.7.6.2.2.3.0.a.2.ip6.arpa.upstream.
 $TTL 86400	; 1 Tag
-@				IN SOA	srv02.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2017052600; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+@				IN SOA	dns01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
+				2019070500; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -9,8 +9,7 @@ $TTL 86400	; 1 Tag
 				)
 
 ;AUTHORATIVE NAMESERVERS
-@				NS	srv02.hamburg.freifunk.net.
-;@				NS	gw01.hamburg.freifunk.net.
+@				NS	dns01.hamburg.freifunk.net.
 
 ;NETWORK
 0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0	PTR	ost.hamburg.freifunk.net.

@@ -1,7 +1,7 @@
 $ORIGIN ffhh.
 $TTL 3600 ; 1 Stunde
-@			IN SOA	srv02.ffhh. hostmaster.hamburg.freifunk.net. (
-				2018031200 ; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+@			IN SOA	dns01.ffhh. hostmaster.hamburg.freifunk.net. (
+				2019070500 ; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -10,11 +10,13 @@ $TTL 3600 ; 1 Stunde
 
 
 ;AUTHORATIVE NAMESERVER
-@			NS	srv02.ffhh.
-;@			NS	gw01.ffhh.
+@			NS	dns01.ffhh.
 
 
 ;SERVERS
+dns01			A	212.12.51.134
+			AAAA	2a00:14b0:4200:3380:134::1
+
 srv01			A	212.12.51.134
 			AAAA	2a00:14b0:4200:3380:134::1
 
