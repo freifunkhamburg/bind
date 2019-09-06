@@ -152,12 +152,10 @@ xmpp			A	193.96.224.250
 dev			CNAME	srv02
 formular		CNAME	srv02
 git			CNAME	srv02
-hopglass		CNAME	srv02
 hopglass-backend	CNAME	gw03-new
 kanban			CNAME	srv01
 lg			CNAME	srv02
 map			CNAME	mail2
-meshviewer		CNAME	srv02
 monitoring		CNAME	srv01
 news			CNAME	srv02
 paste			CNAME	cloud
