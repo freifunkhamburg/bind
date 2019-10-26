@@ -14,8 +14,8 @@ $TTL 1800	; 1/2 Stunde waehrend Umstellungsphase
 
 
 ;IP OF helgoland.freifunk.net
-@	A	91.250.99.221	; freifunk.net
-@	AAAA	2a01:488:66:1000:5bfa:63dd:0:1	; freifunk.net
+@	A	213.133.108.18	; pinneberg.freifunk.net
+@	AAAA	2a01:4f8:130:6372::2	; pinneberg.freifunk.net
 
 
 ;GATEWAYS
