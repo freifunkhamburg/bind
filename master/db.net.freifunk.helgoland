@@ -1,7 +1,7 @@
 $ORIGIN helgoland.freifunk.net.
 $TTL 1800	; 1/2 Stunde waehrend Umstellungsphase
 @			IN SOA	dns01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2019102600; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+				2019103002; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -19,8 +19,11 @@ $TTL 1800	; 1/2 Stunde waehrend Umstellungsphase
 
 
 ;GATEWAYS
-gw01	A	80.252.100.115
-	AAAA	2a00:1f78:c:e::f
+gw01		A	80.252.100.115
+		AAAA	2a00:1f78:c:e::f
+
+gw02		A	81.7.18.111
+		AAAA	2a02:180:6:1::487
 
 ;INFRASTRUCTURE
 srv01		A	78.46.121.104
@@ -31,6 +34,7 @@ srv01		A	78.46.121.104
 karte		A	81.7.16.37	; srv01.pinneberg.freifunk.net temp. fuer Umstellung
 		AAAA	2a02:180:1:1::517:1025
 
+download	CNAME	gw02
 updates		CNAME	srv01
 formular	CNAME	srv01
 meta		CNAME 	srv01
