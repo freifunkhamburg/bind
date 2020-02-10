@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Stunde
 @	IN	SOA	dns01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-		2020012401; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+		2020021000; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 		1800	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 		7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 		3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -92,7 +92,7 @@ mail2			A	193.96.224.229
 			AAAA	2a03:2267:ffff:c00::e
 			MX	10 mail2.hamburg.freifunk.net.
 pfa.mail2		CNAME 	mail2
-meta			CNAME	srv02
+meta			CNAME	srv01
 media			A	193.96.224.250		; srv02
 			AAAA	2a03:2267:ffff:b00::3
 builder1		A	80.150.98.130
@@ -153,7 +153,7 @@ xmpp			A	193.96.224.250
 			AAAA	2a03:2267:ffff:b00::3
 
 ; SERVICES (CNAMES)
-dev			CNAME	srv02
+dev			CNAME	srv01
 formular		CNAME	srv01
 git			CNAME	mail2
 hopglass-backend	CNAME	gw03-new
@@ -166,7 +166,6 @@ paste			CNAME	cloud
 podcast			CNAME	srv02
 smokeping		CNAME	hh01s01.unbedenklich.net.
 statistik		CNAME	ff.besaid.de.
-support			CNAME	srv02
 tuwat			CNAME	srv01
 wasgeht			CNAME	stats.uptimerobot.com.
 wp			CNAME	srv01
