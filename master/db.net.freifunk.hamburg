@@ -136,7 +136,8 @@ suede0-link.gw01	AAAA	2a03:2267:ffff:0c00::2
 ; SERVICES
 cloud			A	193.96.224.238
 			AAAA	2a03:2267:2:0:224:21ff:fe2e:63f9
-speicher		AAAA	2a03:2267:2:0:7285:c2ff:fe23:d4ae
+speicher		A	193.96.224.237
+			AAAA	2a03:2267:2:0:7285:c2ff:fe23:d4ae
 media-mirror		A	193.96.224.226
 			AAAA	2a03:2267:ffff:c00::c
 statistik-backend	AAAA	2a01:4f8:210:40d1::ff02
