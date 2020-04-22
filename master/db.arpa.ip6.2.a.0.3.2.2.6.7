@@ -1,7 +1,7 @@
 $ORIGIN 7.6.2.2.3.0.a.2.ip6.arpa.
 $TTL 86400	; 1 Tag
 @				IN SOA	dns01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2019070500; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2020042200; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -40,8 +40,6 @@ a.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0			PTR	suede0.hamburg.freifunk.net.
 b.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0			PTR	wende0.hamburg.freifunk.net.
 c.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0			PTR	wandale0.hamburg.freifunk.net.
 
-
-
 ; Internes Netz: 2a03:2267:ffff::/48
 $ORIGIN f.f.f.f.7.6.2.2.3.0.a.2.ip6.arpa.
 
@@ -50,6 +48,7 @@ $ORIGIN f.f.f.f.7.6.2.2.3.0.a.2.ip6.arpa.
 2.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.a.0		PTR	host01-br.gw02.hamburg.freifunk.net.
 3.0.0.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.a.0		PTR	vpn03f.berlin.freifunk.net.
 1.4.f.f.0.0.0.0.0.0.0.0.0.0.0.0.0.0.a.0		PTR	ffhl-vm.host01.hamburg.freifunk.net.
+e.d.1.b.0.0.0.0.0.0.0.0.0.0.0.0.0.0.a.0		PTR	videobridge2.hamburg.freifunk.net.
 
 ; 2a03:2267:ffff:0b00::/56 Tunnel wende0
 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.b.0		PTR	host02-br.wende1.hamburg.freifunk.net.

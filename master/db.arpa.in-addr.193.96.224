@@ -1,7 +1,7 @@
 $ORIGIN 224.96.193.in-addr.arpa.
 $TTL 86400	; 1 Tag
 @			IN SOA	dns01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2020041600; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2020042200; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -59,7 +59,7 @@ $TTL 86400	; 1 Tag
 243			PTR	nat-243-vpn03f.berlin.freifunk.net.
 244			PTR	vpn03f.berlin.freifunk.net.
 245			PTR	host01-br.wandale0.hamburg.freifunk.net.
-246			PTR	gw02.hamburg.freifunk.net. ; fastd instance gw05
+246			PTR	videobridge2.hamburg.freifunk.net.
 
 249			PTR	host02-br.wende1.hamburg.freifunk.net. ; 249/29
 250			PTR	srv02.hamburg.freifunk.net.
