@@ -164,7 +164,6 @@ map			CNAME	mail2
 media			CNAME	srv01
 monitoring		CNAME	srv01
 news			CNAME	srv02
-paste			CNAME	cloud
 podcast			CNAME	srv02
 smokeping		CNAME	hh01s01.unbedenklich.net.
 statistik		CNAME	ff.besaid.de.
