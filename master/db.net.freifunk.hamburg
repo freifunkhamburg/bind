@@ -176,7 +176,6 @@ wp			CNAME	srv01
 www			CNAME	srv01
 
 ; Corona
-jitsi			A	217.79.181.13
-			AAAA	2001:4ba0:ffff:241::1
+jitsi			CNAME	srv01
 videobridge2		A	193.96.224.246
 			AAAA	2a03:2267:ffff:a00::b1de
