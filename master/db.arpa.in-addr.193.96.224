@@ -1,7 +1,7 @@
 $ORIGIN 224.96.193.in-addr.arpa.
 $TTL 86400	; 1 Tag
 @			IN SOA	dns01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-				2020042200; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2021010900; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -59,7 +59,7 @@ $TTL 86400	; 1 Tag
 243			PTR	nat-243-vpn03f.berlin.freifunk.net.
 244			PTR	vpn03f.berlin.freifunk.net.
 245			PTR	host01-br.wandale0.hamburg.freifunk.net.
-246			PTR	videobridge2.hamburg.freifunk.net.
+246			PTR	wg02.hamburg.freifunk.net.
 
 249			PTR	host02-br.wende1.hamburg.freifunk.net. ; 249/29
 250			PTR	srv02.hamburg.freifunk.net.
@@ -71,54 +71,54 @@ $TTL 86400	; 1 Tag
 ; CLIENT-NAT blocks. /29 per gateway.
 
 ; GW01
-0			PTR	nat-0-gw01.hamburg.freifunk.net.
-1			PTR	nat-1-gw01.hamburg.freifunk.net.
-2			PTR	nat-2-gw01.hamburg.freifunk.net.
-3			PTR	nat-3-gw01.hamburg.freifunk.net.
-4			PTR	nat-4-gw01.hamburg.freifunk.net.
-5			PTR	nat-5-gw01.hamburg.freifunk.net.
-6			PTR	nat-6-gw01.hamburg.freifunk.net.
-7			PTR	nat-7-gw01.hamburg.freifunk.net.
+;0			PTR	nat-0-gw01.hamburg.freifunk.net.
+;1			PTR	nat-1-gw01.hamburg.freifunk.net.
+;2			PTR	nat-2-gw01.hamburg.freifunk.net.
+;3			PTR	nat-3-gw01.hamburg.freifunk.net.
+;4			PTR	nat-4-gw01.hamburg.freifunk.net.
+;5			PTR	nat-5-gw01.hamburg.freifunk.net.
+;6			PTR	nat-6-gw01.hamburg.freifunk.net.
+;7			PTR	nat-7-gw01.hamburg.freifunk.net.
 
-; GW02
-8			PTR	nat-8-gw02.hamburg.freifunk.net.
-9			PTR	nat-9-gw02.hamburg.freifunk.net.
-10			PTR	nat-10-gw02.hamburg.freifunk.net.
-11			PTR	nat-11-gw02.hamburg.freifunk.net.
-12			PTR	nat-12-gw02.hamburg.freifunk.net.
-13			PTR	nat-13-gw02.hamburg.freifunk.net.
-14			PTR	nat-14-gw02.hamburg.freifunk.net.
-15			PTR	nat-15-gw02.hamburg.freifunk.net.
+; WG02
+8			PTR	nat-8-wg02.hamburg.freifunk.net.
+9			PTR	nat-9-wg02.hamburg.freifunk.net.
+10			PTR	nat-10-wg02.hamburg.freifunk.net.
+11			PTR	nat-11-wg02.hamburg.freifunk.net.
+12			PTR	nat-12-wg02.hamburg.freifunk.net.
+13			PTR	nat-13-wg02.hamburg.freifunk.net.
+14			PTR	nat-14-wg02.hamburg.freifunk.net.
+15			PTR	nat-15-wg02.hamburg.freifunk.net.
 
 ; GW03
-16			PTR	nat-16-gw03.hamburg.freifunk.net.
-17			PTR	nat-17-gw03.hamburg.freifunk.net.
-18			PTR	nat-18-gw03.hamburg.freifunk.net.
-19			PTR	nat-19-gw03.hamburg.freifunk.net.
-20			PTR	nat-20-gw03.hamburg.freifunk.net.
-21			PTR	nat-21-gw03.hamburg.freifunk.net.
-22			PTR	nat-22-gw03.hamburg.freifunk.net.
-23			PTR	nat-23-gw03.hamburg.freifunk.net.
+;16			PTR	nat-16-gw03.hamburg.freifunk.net.
+;17			PTR	nat-17-gw03.hamburg.freifunk.net.
+;18			PTR	nat-18-gw03.hamburg.freifunk.net.
+;19			PTR	nat-19-gw03.hamburg.freifunk.net.
+;20			PTR	nat-20-gw03.hamburg.freifunk.net.
+;21			PTR	nat-21-gw03.hamburg.freifunk.net.
+;22			PTR	nat-22-gw03.hamburg.freifunk.net.
+;23			PTR	nat-23-gw03.hamburg.freifunk.net.
 
 ; GW05
-24			PTR	nat-24-gw05.hamburg.freifunk.net.
-25			PTR	nat-25-gw05.hamburg.freifunk.net.
-26			PTR	nat-26-gw05.hamburg.freifunk.net.
-27			PTR	nat-27-gw05.hamburg.freifunk.net.
-28			PTR	nat-28-gw05.hamburg.freifunk.net.
-29			PTR	nat-29-gw05.hamburg.freifunk.net.
-30			PTR	nat-30-gw05.hamburg.freifunk.net.
-31			PTR	nat-31-gw05.hamburg.freifunk.net.
+;24			PTR	nat-24-gw05.hamburg.freifunk.net.
+;25			PTR	nat-25-gw05.hamburg.freifunk.net.
+;26			PTR	nat-26-gw05.hamburg.freifunk.net.
+;27			PTR	nat-27-gw05.hamburg.freifunk.net.
+;28			PTR	nat-28-gw05.hamburg.freifunk.net.
+;29			PTR	nat-29-gw05.hamburg.freifunk.net.
+;30			PTR	nat-30-gw05.hamburg.freifunk.net.
+;31			PTR	nat-31-gw05.hamburg.freifunk.net.
 
 ; GW08
-32			PTR	nat-32-gw08.hamburg.freifunk.net.
-33			PTR	nat-33-gw08.hamburg.freifunk.net.
-34			PTR	nat-34-gw08.hamburg.freifunk.net.
-35			PTR	nat-35-gw08.hamburg.freifunk.net.
-36			PTR	nat-36-gw08.hamburg.freifunk.net.
-37			PTR	nat-37-gw08.hamburg.freifunk.net.
-38			PTR	nat-38-gw08.hamburg.freifunk.net.
-39			PTR	nat-39-gw08.hamburg.freifunk.net.
+;32			PTR	nat-32-gw08.hamburg.freifunk.net.
+;33			PTR	nat-33-gw08.hamburg.freifunk.net.
+;34			PTR	nat-34-gw08.hamburg.freifunk.net.
+;35			PTR	nat-35-gw08.hamburg.freifunk.net.
+;36			PTR	nat-36-gw08.hamburg.freifunk.net.
+;37			PTR	nat-37-gw08.hamburg.freifunk.net.
+;38			PTR	nat-38-gw08.hamburg.freifunk.net.
+;39			PTR	nat-39-gw08.hamburg.freifunk.net.
 
 ; bremen.freifunk.net
 40			PTR	nat-40-vpn01.bremen.freifunk.net.
@@ -134,8 +134,8 @@ $TTL 86400	; 1 Tag
 ;47 reserved: other community
 
 ; schnacke0.hamburg.freifunk.net
-48			PTR	nat-48-schnacke0.hamburg.freifunk.net.
-49			PTR	nat-49-schnacke0.hamburg.freifunk.net.
+;48 reserved: ZEA/non-mesh NAT
+;49 reserved: ZEA/non-mesh NAT
 ;50 reserved: ZEA/non-mesh NAT
 ;51 reserved: ZEA/non-mesh NAT
 ;52 reserved: ZEA/non-mesh NAT

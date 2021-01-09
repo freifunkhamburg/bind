@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Stunde
 @	IN	SOA	dns01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-		2020100500; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+		2021010900; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 		1800	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 		7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 		3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -68,7 +68,8 @@ gw05-new		A	193.96.224.241
 			AAAA	2a03:2267:ffff:a00::2000
 gw06-new		A	193.96.224.254
 			AAAA	2a03:2267:ffff:b00::3000
-gw02-supernew		A	193.96.224.246
+wg02			A	193.96.224.246
+			AAAA	2a03:2267:ffff:a00::b1de
 
 ; ICVPN
 01.icvpn		CNAME	gw01
@@ -174,8 +175,3 @@ tuwat			CNAME	srv01
 wasgeht			CNAME	stats.uptimerobot.com.
 wp			CNAME	srv01
 www			CNAME	srv01
-
-; Corona
-jitsi			CNAME	srv01
-videobridge2		A	193.96.224.246
-			AAAA	2a03:2267:ffff:a00::b1de
