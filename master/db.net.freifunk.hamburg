@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Stunde
 @	IN	SOA	dns01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-		2021010900; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+		2021050100; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 		1800	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 		7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 		3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -172,6 +172,6 @@ podcast			CNAME	srv02
 smokeping		CNAME	hh01s01.unbedenklich.net.
 statistik		CNAME	ff.besaid.de.
 tuwat			CNAME	srv01
-wasgeht			CNAME	stats.uptimerobot.com.
+wasgeht			CNAME	srv01
 wp			CNAME	srv01
 www			CNAME	srv01
