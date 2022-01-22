@@ -1,7 +1,7 @@
 $ORIGIN hamburg.freifunk.net.
 $TTL 3600	; 1 Stunde
 @	IN	SOA	dns01.hamburg.freifunk.net. hostmaster.hamburg.freifunk.net. (
-		2021123100; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
+		2022012200; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMDDVV)
 		1800	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 		7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 		3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -142,6 +142,8 @@ speicher		A	193.96.224.237
 media-mirror		A	193.96.224.226
 			AAAA	2a03:2267:ffff:c00::c
 statistik-backend	AAAA	2a01:4f8:210:40d1::ff02
+stats			A	142.132.181.225
+			AAAA	2a01:4f8:1c17:dbfb::1
 updates			A	212.12.51.134	; srv01, dns load balancing
 			AAAA	2a00:14b0:4200:3380:134::1
 updates			A	80.252.100.117	; srv03, dns load balancing
